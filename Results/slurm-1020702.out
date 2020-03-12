@@ -1,0 +1,89 @@
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                64
+On-line CPU(s) list:   0-63
+Thread(s) per core:    2
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+Stepping:              4
+CPU MHz:               2016.430
+CPU max MHz:           3700.0000
+CPU min MHz:           1000.0000
+BogoMIPS:              4200.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0-15,32-47
+NUMA node1 CPU(s):     16-31,48-63
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke md_clear spec_ctrl intel_stibp flush_l1d
+2020-02-20 09:48:02
+Numpy 1.16 has memory leak bug  https://github.com/numpy/numpy/issues/13808
+It is recommended to downgrade to numpy 1.15 or older
+/apps/Vera/software/MPI/GCC/8.2.0-2.31.1/OpenMPI/3.1.3/PySCF/1.6.3-Python-3.7.2/pyscf/scf/chkfile.py:31: H5pyDeprecationWarning: The default file mode will change to 'r' (read-only) in h5py 3.0. To suppress this warning, pass the mode you need to h5py.File(), or set the global default h5.get_config().default_file_mode, or set the environment variable H5PY_DEFAULT_READONLY=1. Available modes are: 'r', 'r+', 'w', 'w-'/'x', 'a'. See the docs for details.
+  with h5py.File(chkfile) as fh5:
+operator number:  0
+operator number:  1
+operator number:  2
+operator number:  3
+Operator number:  2  contains the ground state.
+{'energy': -107.65196428065862, 'nuclear_repulsion_energy': 23.572439395527272, 'hf_energy': -107.49650051179786, 'energies': [-107.65196428065862], 'algorithm_retvals': {'num_optimizer_evals': 3664, 'min_val': -131.2244036761859, 'opt_params': array([ 6.83670874e-05, -8.89768369e-03,  7.34418189e-05, -8.88043414e-03,
+       -3.32261584e-04,  2.67854609e-05, -6.09069325e-04,  8.27664186e-06,
+       -5.21187104e-04, -5.10169434e-04,  4.50700513e-04,  6.97679002e-07,
+       -1.86415894e-05, -3.25798092e-04,  1.58072022e-05, -6.11251489e-04,
+       -5.01296815e-04,  5.11722088e-04, -1.29939072e-06,  4.48765243e-04,
+       -9.87913213e-04, -4.17183575e-04,  1.49975800e-04,  1.43963292e-04,
+        1.46759474e-04, -1.42852949e-04,  3.79915694e-04, -3.36797151e-04,
+        4.40403820e-05,  9.81384656e-04,  6.77052840e-06, -1.87961406e-05,
+       -3.09655839e-04,  5.13707064e-08,  9.72572759e-04, -1.03197646e-03,
+        7.88003271e-04, -6.18416026e-04,  1.90719686e-06, -1.12051792e-02,
+        2.00389889e-05, -1.31111593e-02, -1.28973040e-02,  8.30771843e-03,
+       -1.26829670e-05,  7.01774488e-06, -6.16119575e-04,  1.89324681e-05,
+       -1.11243341e-02, -1.28564320e-02,  1.29315601e-02, -7.62616540e-06,
+        8.25562624e-03, -4.34621242e-04, -2.45446190e-02, -2.23129613e-02,
+       -2.18147373e-02, -2.15720780e-02,  2.15499611e-02, -1.56184667e-02,
+        9.74622351e-04, -9.75677882e-07, -5.13320617e-02,  1.53366705e-05,
+       -8.20906017e-08,  9.57457848e-04,  1.44593719e-05, -5.11635805e-02,
+        7.24453303e-04, -1.28031960e-02,  1.52923525e-04, -2.23399748e-02,
+       -7.84509320e-02, -6.14170430e-02, -6.12612034e-02,  2.55255300e-02,
+       -2.27235442e-02,  1.38877723e-04, -2.17400664e-02, -6.11626963e-02,
+       -7.62621859e-02, -2.40780204e-02,  6.07607686e-02, -2.20928290e-02,
+       -4.86760731e-04, -4.75920237e-04, -1.31385386e-02, -1.29195348e-02,
+       -1.22204872e-02,  1.74716203e-05,  4.83543276e-04,  4.82183338e-04,
+        1.46088833e-04, -2.15020690e-02, -6.07958778e-02, -2.40952369e-02,
+       -7.62490812e-02,  6.09663192e-02, -2.20937577e-02, -1.52543816e-04,
+        2.19021318e-02,  2.54986733e-02,  6.12589917e-02,  6.12897341e-02,
+       -7.80867780e-02,  2.25156244e-02, -4.47284500e-04,  4.41933684e-04,
+       -1.30227134e-02,  1.31849981e-02,  9.87775468e-06, -1.22649761e-02,
+        4.83096668e-04, -4.92703595e-04,  3.48676631e-04,  3.65669742e-06,
+        8.43752604e-03,  1.67800020e-06,  4.89328693e-04,  4.77950397e-04,
+       -2.25901825e-02, -1.24254638e-08, -5.20707668e-06,  3.44420509e-04,
+        1.03975023e-05,  8.44670787e-03,  4.87683082e-04, -4.85136560e-04,
+       -1.78009685e-05, -2.25937965e-02,  3.40142389e-04, -1.56508302e-02,
+       -2.25141820e-02, -2.22864050e-02, -2.22792664e-02,  2.25144162e-02,
+       -2.82769366e-02, -6.16428446e-06, -6.68800707e-04, -6.61939682e-04,
+       -6.28776996e-06, -6.66054256e-04,  6.71256231e-04, -1.39533899e-06,
+        9.12196761e-03,  9.04043530e-03, -1.96557353e-06,  9.04099219e-03,
+       -9.11861402e-03,  5.17238618e-02, -2.35126152e-02, -2.32695488e-02,
+       -2.32739394e-02,  2.35525856e-02, -3.96683347e-06, -6.65046928e-04,
+       -6.63005426e-04, -1.39283040e-06, -6.65951431e-04,  6.62784876e-04,
+       -1.20195409e-06,  9.12782552e-03,  9.03940696e-03, -4.20087392e-06,
+        9.03767645e-03, -9.11205320e-03,  5.17229237e-02, -2.35219177e-02,
+       -2.32704913e-02, -2.32811157e-02,  2.35535229e-02]), 'eval_time': 23697.226847410202, 'eval_count': 3664, 'energy': -131.2244036761859, 'eigvals': array([-131.22440368]), 'min_vector': array([-2.75408146e-18+5.09397614e-18j, -2.03767952e-18-2.56365212e-18j,
+        1.06242798e-18-3.39260981e-18j, ...,
+       -2.05370313e-18+2.66023344e-19j, -1.47118742e-17-1.10294608e-17j,
+       -1.10100386e-17-3.16471619e-17j]), 'eigvecs': array([[-2.75408146e-18+5.09397614e-18j, -2.03767952e-18-2.56365212e-18j,
+         1.06242798e-18-3.39260981e-18j, ...,
+        -2.05370313e-18+2.66023344e-19j, -1.47118742e-17-1.10294608e-17j,
+        -1.10100386e-17-3.16471619e-17j]])}}
+
+real	411m45.653s
+user	1191m30.576s
+sys	16m8.036s

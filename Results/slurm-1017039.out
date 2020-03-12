@@ -1,0 +1,72 @@
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                64
+On-line CPU(s) list:   0-63
+Thread(s) per core:    2
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+Stepping:              4
+CPU MHz:               2799.957
+CPU max MHz:           3700.0000
+CPU min MHz:           1000.0000
+BogoMIPS:              4200.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0-15,32-47
+NUMA node1 CPU(s):     16-31,48-63
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke md_clear spec_ctrl intel_stibp flush_l1d
+2020-02-19 17:37:59
+Copying to:
+Numpy 1.16 has memory leak bug  https://github.com/numpy/numpy/issues/13808
+It is recommended to downgrade to numpy 1.15 or older
+/apps/Vera/software/MPI/GCC/8.2.0-2.31.1/OpenMPI/3.1.3/PySCF/1.6.3-Python-3.7.2/pyscf/scf/chkfile.py:31: H5pyDeprecationWarning: The default file mode will change to 'r' (read-only) in h5py 3.0. To suppress this warning, pass the mode you need to h5py.File(), or set the global default h5.get_config().default_file_mode, or set the environment variable H5PY_DEFAULT_READONLY=1. Available modes are: 'r', 'r+', 'w', 'w-'/'x', 'a'. See the docs for details.
+  with h5py.File(chkfile) as fh5:
+operator number:  0
+operator number:  1
+operator number:  2
+operator number:  3
+Operator number:  2  contains the ground state.
+{'energy': -107.6516751605157, 'nuclear_repulsion_energy': 23.572439395527272, 'hf_energy': -107.49650051179783, 'energies': [-107.6516751605157], 'algorithm_retvals': {'num_optimizer_evals': 919, 'min_val': -31.217355305485583, 'opt_params': array([-8.85291222e-03, -8.85166352e-03, -1.09515931e-02,  1.18898179e-06,
+       -1.84732118e-02, -4.37290974e-04,  8.35430176e-03, -2.33656730e-06,
+       -2.68676847e-06, -1.08714353e-02,  4.35301237e-04, -1.82907270e-02,
+        1.19462101e-06,  8.30087084e-03, -2.45216280e-02, -3.12412792e-02,
+        7.30065070e-04, -7.33438261e-04, -3.05034696e-02, -1.55924304e-02,
+       -5.12508230e-02,  1.77364374e-07, -3.19600899e-06, -5.10675304e-02,
+       -1.33081435e-02, -3.12942636e-02, -1.39104964e-01,  2.90235007e-03,
+       -2.90571333e-03, -8.53165423e-02, -3.16372373e-02,  7.25603994e-04,
+        2.88696717e-03, -1.60944988e-02, -3.66433519e-02,  2.88458280e-03,
+        7.42129130e-04, -1.85199218e-02,  4.35376308e-04, -1.21992072e-02,
+       -2.57998568e-06,  6.95285625e-04, -1.80670259e-05, -7.28626621e-04,
+       -2.88970110e-03, -3.65996199e-02, -1.61545998e-02, -2.89067637e-03,
+       -7.43806109e-04, -3.06231177e-02, -8.53311156e-02,  2.89939828e-03,
+       -2.90551835e-03, -1.38735356e-01, -3.16837777e-02, -4.40967740e-04,
+       -1.85993667e-02, -3.69148907e-07, -1.22674936e-02,  1.59199749e-05,
+        6.98884658e-04,  8.50730947e-03, -4.60361822e-07,  7.00127658e-04,
+        1.85509061e-05, -2.25598302e-02, -9.13586468e-07,  1.23815100e-06,
+        8.50983415e-03, -1.69193825e-05,  7.00695644e-04,  4.99618228e-07,
+       -2.25717666e-02, -1.56432756e-02, -3.17205112e-02,  7.53065673e-04,
+       -7.53814384e-04, -3.16989615e-02, -2.80617312e-02,  1.27979123e-02,
+        3.02846733e-04, -1.50508821e-06, -3.04113008e-04,  1.27938211e-02,
+       -5.11619158e-02, -3.31366575e-02,  7.85916830e-04, -7.87239361e-04,
+       -3.31517131e-02,  1.27985688e-02,  3.01369376e-04, -3.15064066e-07,
+       -3.01606433e-04,  1.27921423e-02, -5.11599509e-02, -3.31380317e-02,
+        7.87022863e-04, -7.87764059e-04, -3.31524943e-02]), 'eval_time': 1079.8879477977753, 'eval_count': 919, 'energy': -31.217355305485583, 'eigvals': array([-31.21735531]), 'min_vector': array([ 2.79687816e-17-1.53985429e-17j, -5.02511369e-18+5.72804836e-17j,
+       -8.23982495e-18+1.78958189e-17j, ...,
+        3.87522341e-17+7.04405307e-17j,  2.02883917e-17+3.46964392e-17j,
+       -2.54426294e-17-7.35257798e-17j]), 'eigvecs': array([[ 2.79687816e-17-1.53985429e-17j, -5.02511369e-18+5.72804836e-17j,
+        -8.23982495e-18+1.78958189e-17j, ...,
+         3.87522341e-17+7.04405307e-17j,  2.02883917e-17+3.46964392e-17j,
+        -2.54426294e-17-7.35257798e-17j]])}}
+
+real	20m53.669s
+user	19m13.328s
+sys	0m32.511s
