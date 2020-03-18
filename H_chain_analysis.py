@@ -1,13 +1,9 @@
 import sys, os
 import numpy as np
 from datetime import datetime
-import matplotlib.pyplot as plt
 
 os.environ['MATPLOTLIBRC'] = './config/matplotlibrc'
-
-plt.rcParams['figure.figsize'] = (10,6)
-plt.rcParams['lines.markersize'] = 10
-plt.rcParams['lines.markeredgewidth'] = 2
+import matplotlib.pyplot as plt
 
 
 def mean_time_slurm_file(input_filename):
