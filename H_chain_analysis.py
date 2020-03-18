@@ -3,6 +3,11 @@ import numpy as np
 from datetime import datetime
 
 os.environ['MATPLOTLIBRC'] = './config/matplotlibrc'
+data_dir = './Data/'
+figure_dir = './Results/Figures/'
+settings_filename = 'H_chain_benchmarks.csv'
+
+
 import matplotlib.pyplot as plt
 
 
@@ -56,11 +61,8 @@ def real_time_slurm_file(input_filename):
     return real_time
 
 
-res_dir = './Data/'
-settings_filename = 'H_chain_benchmarks.csv'
-
 # Read the settings
-settings_file = open(res_dir + settings_filename, 'r')
+settings_file = open(data_dir + settings_filename, 'r')
 settings = []
 
 for line in settings_file:
@@ -76,8 +78,8 @@ for setting in settings:
     jobid = setting[-1]
     
     try:
-        mean_time, std_dev = mean_time_slurm_file(res_dir + 'slurm-' + str(jobid) + '.out')
-        real_time = real_time_slurm_file(res_dir + 'slurm-' + str(jobid) + '.out')
+        mean_time, std_dev = mean_time_slurm_file(data_dir + 'slurm-' + str(jobid) + '.out')
+        real_time = real_time_slurm_file(data_dir + 'slurm-' + str(jobid) + '.out')
         mean_times.append(mean_time)
         mean_time_std_devs.append(std_dev)
         real_times.append(real_time)
@@ -117,12 +119,13 @@ plt.xscale('log')
 plt.tight_layout()
 plt.xlabel('Number of Tasks')
 plt.ylabel('Seconds [s]')
+plt.savefig(figure_dir + 'mean_evaluation_time.png', bbox_inches='tight')
 
 
 
 
 plt.figure(2)
-plt.title('Mean evaluation time standard deviatition')
+plt.title('Mean evaluation time standard deviation')
 data = np.array(mean_time_std_devs).reshape(-1, 6)
 
 print('\nMean time standard deviation:')
@@ -144,6 +147,7 @@ plt.grid(True, which='both')
 plt.tight_layout()
 plt.xlabel('Number of Tasks')
 plt.ylabel('Seconds [s]')
+plt.savefig(figure_dir + 'evaluation_time_standard_deviation.png', bbox_inches='tight')
 
 
 
@@ -172,5 +176,6 @@ plt.grid(True, which='both')
 plt.tight_layout()
 plt.xlabel('Number of Tasks')
 plt.ylabel('Seconds [s]')
+plt.savefig(figure_dir + 'total_wall_time.png', bbox_inches='tight')
 
 plt.show()
