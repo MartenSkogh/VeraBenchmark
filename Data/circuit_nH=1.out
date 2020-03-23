@@ -1,0 +1,172 @@
+2020-03-19 15:56:41,468:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "atom": "H 0.0 0.0 0.0; ",
+    "basis": "sto3g",
+    "charge": 0,
+    "conv_tol": 1e-09,
+    "hf_method": "rohf",
+    "init_guess": "minao",
+    "max_cycle": 50,
+    "max_memory": null,
+    "spin": 1,
+    "unit": "Angstrom"
+}
+2020-03-19 15:56:41,469:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "pyscf_schema",
+    "properties": {
+        "atom": {
+            "default": "H 0.0 0.0 0.0; H 0.0 0.0 0.735",
+            "type": "string"
+        },
+        "basis": {
+            "default": "sto3g",
+            "type": "string"
+        },
+        "charge": {
+            "default": 0,
+            "type": "integer"
+        },
+        "conv_tol": {
+            "default": 1e-09,
+            "type": "number"
+        },
+        "hf_method": {
+            "default": "rhf",
+            "enum": [
+                "rhf",
+                "rohf",
+                "uhf"
+            ],
+            "type": "string"
+        },
+        "init_guess": {
+            "default": "minao",
+            "enum": [
+                "minao",
+                "1e",
+                "atom"
+            ],
+            "type": "string"
+        },
+        "max_cycle": {
+            "default": 50,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "max_memory": {
+            "default": null,
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "spin": {
+            "default": 0,
+            "type": "integer"
+        },
+        "unit": {
+            "default": "Angstrom",
+            "enum": [
+                "Angstrom",
+                "Bohr"
+            ],
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:41,618:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "freeze_core": false,
+    "orbital_reduction": [],
+    "qubit_mapping": "parity",
+    "transformation": "full",
+    "two_qubit_reduction": true
+}
+2020-03-19 15:56:41,618:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "hamiltonian_schema",
+    "properties": {
+        "freeze_core": {
+            "default": false,
+            "type": "boolean"
+        },
+        "orbital_reduction": {
+            "default": [],
+            "items": {
+                "type": "number"
+            },
+            "type": "array"
+        },
+        "qubit_mapping": {
+            "default": "parity",
+            "enum": [
+                "jordan_wigner",
+                "parity",
+                "bravyi_kitaev"
+            ],
+            "type": "string"
+        },
+        "transformation": {
+            "default": "full",
+            "enum": [
+                "full",
+                "particle_hole"
+            ],
+            "type": "string"
+        },
+        "two_qubit_reduction": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:41,932:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "aux_ops": null,
+    "qubit_op": {
+        "paulis": [
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.4665818495572749
+                },
+                "label": ""
+            }
+        ]
+    }
+}
+2020-03-19 15:56:41,932:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "energy_state_schema",
+    "properties": {
+        "aux_ops": {
+            "default": null,
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "qubit_op": {
+            "default": {},
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:42,501:qiskit.aqua.operators.weighted_pauli_operator:INFO: Operator is empty, can not do two qubit reduction. Return the empty operator back.
+2020-03-19 15:56:42,534:qiskit.aqua.operators.weighted_pauli_operator:INFO: Operator is empty, can not do two qubit reduction. Return the empty operator back.
+2020-03-19 15:56:42,568:qiskit.aqua.operators.weighted_pauli_operator:INFO: Operator is empty, can not do two qubit reduction. Return the empty operator back.
+2020-03-19 15:56:42,568:qiskit.aqua.operators.weighted_pauli_operator:INFO: No symmetry is found.
+Traceback (most recent call last):
+  File "run_qiskit.py", line 74, in <module>
+    tapered_ops = z2_symmetries.taper(qubit_op)
+  File "/home/skoghm/.envs/qiskit-benchmarks/lib/python3.6/site-packages/qiskit/aqua/operators/weighted_pauli_operator.py", line 1156, in taper
+    raise AquaError("Z2 symmetries, single qubit pauli and "
+qiskit.aqua.aqua_error.AquaError: 'Z2 symmetries, single qubit pauli and single qubit list cannot be empty.'
+
+real	0m3.741s
+user	0m3.672s
+sys	0m2.641s

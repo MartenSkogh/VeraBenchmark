@@ -1,0 +1,3935 @@
+2020-03-19 15:57:08,374:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "atom": "H -1.47 0.0 0.0; H -0.735 0.0 0.0; H 0.0 0.0 0.0; H 0.7350000000000001 0.0 0.0; H 1.47 0.0 0.0; ",
+    "basis": "sto3g",
+    "charge": 0,
+    "conv_tol": 1e-09,
+    "hf_method": "rohf",
+    "init_guess": "minao",
+    "max_cycle": 50,
+    "max_memory": null,
+    "spin": 1,
+    "unit": "Angstrom"
+}
+2020-03-19 15:57:08,375:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "pyscf_schema",
+    "properties": {
+        "atom": {
+            "default": "H 0.0 0.0 0.0; H 0.0 0.0 0.735",
+            "type": "string"
+        },
+        "basis": {
+            "default": "sto3g",
+            "type": "string"
+        },
+        "charge": {
+            "default": 0,
+            "type": "integer"
+        },
+        "conv_tol": {
+            "default": 1e-09,
+            "type": "number"
+        },
+        "hf_method": {
+            "default": "rhf",
+            "enum": [
+                "rhf",
+                "rohf",
+                "uhf"
+            ],
+            "type": "string"
+        },
+        "init_guess": {
+            "default": "minao",
+            "enum": [
+                "minao",
+                "1e",
+                "atom"
+            ],
+            "type": "string"
+        },
+        "max_cycle": {
+            "default": 50,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "max_memory": {
+            "default": null,
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "spin": {
+            "default": 0,
+            "type": "integer"
+        },
+        "unit": {
+            "default": "Angstrom",
+            "enum": [
+                "Angstrom",
+                "Bohr"
+            ],
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:57:08,667:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "freeze_core": false,
+    "orbital_reduction": [],
+    "qubit_mapping": "parity",
+    "transformation": "full",
+    "two_qubit_reduction": true
+}
+2020-03-19 15:57:08,667:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "hamiltonian_schema",
+    "properties": {
+        "freeze_core": {
+            "default": false,
+            "type": "boolean"
+        },
+        "orbital_reduction": {
+            "default": [],
+            "items": {
+                "type": "number"
+            },
+            "type": "array"
+        },
+        "qubit_mapping": {
+            "default": "parity",
+            "enum": [
+                "jordan_wigner",
+                "parity",
+                "bravyi_kitaev"
+            ],
+            "type": "string"
+        },
+        "transformation": {
+            "default": "full",
+            "enum": [
+                "full",
+                "particle_hole"
+            ],
+            "type": "string"
+        },
+        "two_qubit_reduction": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:57:11,196:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "aux_ops": null,
+    "qubit_op": {
+        "paulis": [
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -3.5299725228163292
+                },
+                "label": "IIIIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.2422955525004344
+                },
+                "label": "IIIIIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.000946716213554504
+                },
+                "label": "IIIIIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.000946716213554504
+                },
+                "label": "IIIIIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0017608800172737194
+                },
+                "label": "IIIIXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017608800172737194
+                },
+                "label": "IIIIYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.1418997293125578
+                },
+                "label": "IIIIIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012298578233926497
+                },
+                "label": "IIIIZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012298578233926497
+                },
+                "label": "IIIIIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.040681411253385556
+                },
+                "label": "IIIIIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.031247234766508328
+                },
+                "label": "IIIIXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.031247234766508328
+                },
+                "label": "IIIIYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.32674589893941214
+                },
+                "label": "IIIIZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.781334157937551
+                },
+                "label": "IIIIZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.24229555250043472
+                },
+                "label": "IIIZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0009467162135544956
+                },
+                "label": "IZXXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0009467162135544956
+                },
+                "label": "IIYYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017608800172737179
+                },
+                "label": "XXXXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017608800172737179
+                },
+                "label": "YXXYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.14189972931255776
+                },
+                "label": "IIZZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012298578233926494
+                },
+                "label": "ZXXZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012298578233926494
+                },
+                "label": "IYYIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.04068141125338532
+                },
+                "label": "IZZIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.031247234766508317
+                },
+                "label": "XXZIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.031247234766508317
+                },
+                "label": "YYIIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.3267458989394121
+                },
+                "label": "ZZIIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.7813341579375509
+                },
+                "label": "ZIIIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.07571732000886285
+                },
+                "label": "IIIIIIZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.011214084150580589
+                },
+                "label": "IIIIZXXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.011214084150580589
+                },
+                "label": "IIIIIYYZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.09043824153408205
+                },
+                "label": "IIIIIZZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.015062073020174772
+                },
+                "label": "IIIIXXZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.015062073020174772
+                },
+                "label": "IIIIYYIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.10210595262995932
+                },
+                "label": "IIIIZZIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.12534051311775987
+                },
+                "label": "IIIIZIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02372354933892252
+                },
+                "label": "IIIIIZYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02372354933892252
+                },
+                "label": "IIIIIIXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0035566508717522816
+                },
+                "label": "IIIIXXYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0035566508717522816
+                },
+                "label": "IIIIYXYX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.022222118336472155
+                },
+                "label": "IIIIZXIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.009360214778337735
+                },
+                "label": "IIIIIXZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.012861903558134418
+                },
+                "label": "IIIIZYIY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.012861903558134418
+                },
+                "label": "IIIIIYIY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.009360214778337735
+                },
+                "label": "IIIIZXZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.022222118336472155
+                },
+                "label": "IIIIIXIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02806255237357539
+                },
+                "label": "IIIIXZZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.020699736438547722
+                },
+                "label": "IIIIXIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0073628159350276725
+                },
+                "label": "IIIIYIIY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0073628159350276725
+                },
+                "label": "IIIIYZZY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.020699736438547722
+                },
+                "label": "IIIIXZIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02806255237357539
+                },
+                "label": "IIIIXIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.016134456381049357
+                },
+                "label": "IIIIXYYX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.016134456381049357
+                },
+                "label": "IIIIYYYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004620343166640715
+                },
+                "label": "IIIIZIXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004620343166640715
+                },
+                "label": "IIIIZZYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01778002333556489
+                },
+                "label": "IIIIZZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01778002333556489
+                },
+                "label": "IIIIZIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004272052394871832
+                },
+                "label": "IIIIYYXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004272052394871832
+                },
+                "label": "IIIIXYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1319625684513191
+                },
+                "label": "IIIZIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.022097822138002578
+                },
+                "label": "IIIZIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.022097822138002578
+                },
+                "label": "IIIZIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.001653701212709235
+                },
+                "label": "IIIZXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.001653701212709235
+                },
+                "label": "IIIZYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0381286958708993
+                },
+                "label": "IIIXIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0381286958708993
+                },
+                "label": "IIZXIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0381286958708993
+                },
+                "label": "IIIXIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0381286958708993
+                },
+                "label": "IIZXIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012987262857484055
+                },
+                "label": "IIIXZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012987262857484055
+                },
+                "label": "IIZXZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012987262857484055
+                },
+                "label": "IIIXIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012987262857484055
+                },
+                "label": "IIZXIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.022097822138002578
+                },
+                "label": "IIYYIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.022097822138002578
+                },
+                "label": "IZXXIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026009725099276057
+                },
+                "label": "IIYYIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.026009725099276057
+                },
+                "label": "IZXXIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026009725099276057
+                },
+                "label": "IIYYIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.026009725099276057
+                },
+                "label": "IZXXIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.008012307239459657
+                },
+                "label": "IIYYXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008012307239459657
+                },
+                "label": "IZXXXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008012307239459657
+                },
+                "label": "IIYYYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.008012307239459657
+                },
+                "label": "IZXXYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.012987262857484055
+                },
+                "label": "IYXYIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012987262857484055
+                },
+                "label": "ZXXXIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012987262857484055
+                },
+                "label": "IYXYIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.012987262857484055
+                },
+                "label": "ZXXXIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.019190785047289556
+                },
+                "label": "IYXYZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.019190785047289556
+                },
+                "label": "ZXXXZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.019190785047289556
+                },
+                "label": "IYXYIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.019190785047289556
+                },
+                "label": "ZXXXIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.001653701212709235
+                },
+                "label": "YXXYIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.001653701212709235
+                },
+                "label": "XXXXIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008012307239459658
+                },
+                "label": "YXXYIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008012307239459658
+                },
+                "label": "XXXXIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008012307239459658
+                },
+                "label": "YXXYIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008012307239459658
+                },
+                "label": "XXXXIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.018546365584110016
+                },
+                "label": "YXXYXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.018546365584110016
+                },
+                "label": "XXXXXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.018546365584110016
+                },
+                "label": "YXXYYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.018546365584110016
+                },
+                "label": "XXXXYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.11384601587976216
+                },
+                "label": "IIZZIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0020367339883019127
+                },
+                "label": "IIZZIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0020367339883019127
+                },
+                "label": "IIZZIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.009526817440195958
+                },
+                "label": "IIZZXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.009526817440195958
+                },
+                "label": "IIZZYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.025760283327224423
+                },
+                "label": "IIXIIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.025760283327224423
+                },
+                "label": "IZXZIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.025760283327224423
+                },
+                "label": "IIXIIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.025760283327224423
+                },
+                "label": "IZXZIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.005313835104810963
+                },
+                "label": "IIXIZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.005313835104810963
+                },
+                "label": "IZXZZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.005313835104810963
+                },
+                "label": "IIXIIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.005313835104810963
+                },
+                "label": "IZXZIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02420134700806464
+                },
+                "label": "IYYIIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02420134700806464
+                },
+                "label": "ZXXZIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01817573866294538
+                },
+                "label": "IYYIIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01817573866294538
+                },
+                "label": "ZXXZIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01817573866294538
+                },
+                "label": "IYYIIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01817573866294538
+                },
+                "label": "ZXXZIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00904974015940818
+                },
+                "label": "IYYIXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00904974015940818
+                },
+                "label": "ZXXZXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00904974015940818
+                },
+                "label": "IYYIYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00904974015940818
+                },
+                "label": "ZXXZYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.013083468311948235
+                },
+                "label": "YXYIIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.013083468311948235
+                },
+                "label": "XXXZIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.013083468311948235
+                },
+                "label": "YXYIIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.013083468311948235
+                },
+                "label": "XXXZIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.016412556094435853
+                },
+                "label": "YXYIZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.016412556094435853
+                },
+                "label": "XXXZZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.016412556094435853
+                },
+                "label": "YXYIIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.016412556094435853
+                },
+                "label": "XXXZIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.11644796663335813
+                },
+                "label": "IZZIIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.007775801215261611
+                },
+                "label": "IZZIIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.007775801215261611
+                },
+                "label": "IZZIIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007492225436779907
+                },
+                "label": "IZZIXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.007492225436779907
+                },
+                "label": "IZZIYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02753595344128312
+                },
+                "label": "IXIIIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02753595344128312
+                },
+                "label": "ZXZIIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02753595344128312
+                },
+                "label": "IXIIIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02753595344128312
+                },
+                "label": "ZXZIIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00014471220502114982
+                },
+                "label": "IXIIZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00014471220502114982
+                },
+                "label": "ZXZIZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00014471220502114982
+                },
+                "label": "IXIIIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00014471220502114982
+                },
+                "label": "ZXZIIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.023074380259634424
+                },
+                "label": "YYIIIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.023074380259634424
+                },
+                "label": "XXZIIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02362668181782927
+                },
+                "label": "YYIIIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02362668181782927
+                },
+                "label": "XXZIIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02362668181782927
+                },
+                "label": "YYIIIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02362668181782927
+                },
+                "label": "XXZIIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007851094304547416
+                },
+                "label": "YYIIXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.007851094304547416
+                },
+                "label": "XXZIXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.007851094304547416
+                },
+                "label": "YYIIYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007851094304547416
+                },
+                "label": "XXZIYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.12129673767724887
+                },
+                "label": "ZZIIIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004475630961619566
+                },
+                "label": "ZZIIIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004475630961619566
+                },
+                "label": "ZZIIIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008575093993467108
+                },
+                "label": "ZZIIXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.008575093993467108
+                },
+                "label": "ZZIIYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03711229253298357
+                },
+                "label": "XIIIIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03711229253298357
+                },
+                "label": "XZIIIIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03711229253298357
+                },
+                "label": "XIIIIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03711229253298357
+                },
+                "label": "XZIIIIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012847146388338941
+                },
+                "label": "XIIIZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012847146388338941
+                },
+                "label": "XZIIZXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012847146388338941
+                },
+                "label": "XIIIIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012847146388338941
+                },
+                "label": "XZIIIYXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1438868787018699
+                },
+                "label": "ZIIIIIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02563111764011231
+                },
+                "label": "ZIIIIZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02563111764011231
+                },
+                "label": "ZIIIIIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0015599378602870755
+                },
+                "label": "ZIIIXXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0015599378602870755
+                },
+                "label": "ZIIIYXXY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.08069559131265681
+                },
+                "label": "IIIIIZIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.003697495502321689
+                },
+                "label": "IIIIXXIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.003697495502321689
+                },
+                "label": "IIIIYYZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.09378119818275689
+                },
+                "label": "IIIIZZZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.10675006318856062
+                },
+                "label": "IIIIZIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02939904913416444
+                },
+                "label": "IIIIZYYZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02939904913416444
+                },
+                "label": "IIIIIXXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02422088885056624
+                },
+                "label": "IIIIXIXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008478224421755413
+                },
+                "label": "IIIIXZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.015742664428810817
+                },
+                "label": "IIIIYIYZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.015742664428810817
+                },
+                "label": "IIIIYIYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.008478224421755413
+                },
+                "label": "IIIIXZXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02422088885056624
+                },
+                "label": "IIIIXIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.014619929368870995
+                },
+                "label": "IIIIIXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.014619929368870995
+                },
+                "label": "IIIIZYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.11384601587976216
+                },
+                "label": "IIIZIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02420134700806464
+                },
+                "label": "IIIZZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02420134700806464
+                },
+                "label": "IIIZIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.025760283327224427
+                },
+                "label": "IIIXIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.025760283327224427
+                },
+                "label": "IIZXIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.025760283327224427
+                },
+                "label": "IIIXIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.025760283327224427
+                },
+                "label": "IIZXIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.013083468311948242
+                },
+                "label": "IIIXXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.013083468311948242
+                },
+                "label": "IIZXXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.013083468311948242
+                },
+                "label": "IIIXYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.013083468311948242
+                },
+                "label": "IIZXYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0020367339883019127
+                },
+                "label": "IIYYIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0020367339883019127
+                },
+                "label": "IZXXIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.018175738662945376
+                },
+                "label": "IIYYZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.018175738662945376
+                },
+                "label": "IZXXZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.018175738662945376
+                },
+                "label": "IIYYIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.018175738662945376
+                },
+                "label": "IZXXIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.005313835104810964
+                },
+                "label": "IYXYIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.005313835104810964
+                },
+                "label": "ZXXXIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.005313835104810964
+                },
+                "label": "IYXYIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.005313835104810964
+                },
+                "label": "ZXXXIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.016412556094435853
+                },
+                "label": "IYXYXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.016412556094435853
+                },
+                "label": "ZXXXXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.016412556094435853
+                },
+                "label": "IYXYYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.016412556094435853
+                },
+                "label": "ZXXXYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00952681744019596
+                },
+                "label": "YXXYIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00952681744019596
+                },
+                "label": "XXXXIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00904974015940818
+                },
+                "label": "YXXYZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00904974015940818
+                },
+                "label": "XXXXZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00904974015940818
+                },
+                "label": "YXXYIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00904974015940818
+                },
+                "label": "XXXXIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.11846857948094408
+                },
+                "label": "IIZZIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007938882769297911
+                },
+                "label": "IIZZZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007938882769297911
+                },
+                "label": "IIZZIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03112482183178685
+                },
+                "label": "IIXIIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03112482183178685
+                },
+                "label": "IZXZIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03112482183178685
+                },
+                "label": "IIXIIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03112482183178685
+                },
+                "label": "IZXZIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0020650628001729647
+                },
+                "label": "IIXIXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0020650628001729647
+                },
+                "label": "IZXZXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0020650628001729647
+                },
+                "label": "IIXIYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0020650628001729647
+                },
+                "label": "IZXZYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007938882769297911
+                },
+                "label": "IYYIIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007938882769297911
+                },
+                "label": "ZXXZIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026558660582103103
+                },
+                "label": "IYYIZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026558660582103103
+                },
+                "label": "ZXXZZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026558660582103103
+                },
+                "label": "IYYIIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026558660582103103
+                },
+                "label": "ZXXZIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0020650628001729647
+                },
+                "label": "YXYIIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0020650628001729647
+                },
+                "label": "XXXZIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0020650628001729647
+                },
+                "label": "YXYIIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0020650628001729647
+                },
+                "label": "XXXZIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.017605957769904958
+                },
+                "label": "YXYIXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.017605957769904958
+                },
+                "label": "XXXZXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.017605957769904958
+                },
+                "label": "YXYIYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.017605957769904958
+                },
+                "label": "XXXZYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.11182041314444366
+                },
+                "label": "IZZIIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017085622490558363
+                },
+                "label": "IZZIZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017085622490558363
+                },
+                "label": "IZZIIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.027690486885108605
+                },
+                "label": "IXIIIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.027690486885108605
+                },
+                "label": "ZXZIIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.027690486885108605
+                },
+                "label": "IXIIIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.027690486885108605
+                },
+                "label": "ZXZIIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.001725100552215282
+                },
+                "label": "IXIIXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.001725100552215282
+                },
+                "label": "ZXZIXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.001725100552215282
+                },
+                "label": "IXIIYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.001725100552215282
+                },
+                "label": "ZXZIYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0016324327021487246
+                },
+                "label": "YYIIIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0016324327021487246
+                },
+                "label": "XXZIIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0174677649810261
+                },
+                "label": "YYIIZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0174677649810261
+                },
+                "label": "XXZIZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0174677649810261
+                },
+                "label": "YYIIIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0174677649810261
+                },
+                "label": "XXZIIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.12033985876486
+                },
+                "label": "ZZIIIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01235665651408317
+                },
+                "label": "ZZIIZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01235665651408317
+                },
+                "label": "ZZIIIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02594598940278152
+                },
+                "label": "XIIIIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02594598940278152
+                },
+                "label": "XZIIIZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02594598940278152
+                },
+                "label": "XIIIIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02594598940278152
+                },
+                "label": "XZIIIIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01405637548728745
+                },
+                "label": "XIIIXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01405637548728745
+                },
+                "label": "XZIIXXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.01405637548728745
+                },
+                "label": "XIIIYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.01405637548728745
+                },
+                "label": "XZIIYXYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1243560209584656
+                },
+                "label": "ZIIIIIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028676304856158442
+                },
+                "label": "ZIIIZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028676304856158442
+                },
+                "label": "ZIIIIYYI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.08646497553907394
+                },
+                "label": "IIIIZIZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.10302745448676344
+                },
+                "label": "IIIIZZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03185840081829715
+                },
+                "label": "IIIIYYZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03185840081829715
+                },
+                "label": "IIIIXXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.11644796663335813
+                },
+                "label": "IIIZIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02307438025963443
+                },
+                "label": "IIIZXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02307438025963443
+                },
+                "label": "IIIZYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02753595344128312
+                },
+                "label": "IIIXZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02753595344128312
+                },
+                "label": "IIZXZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02753595344128312
+                },
+                "label": "IIIXIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02753595344128312
+                },
+                "label": "IIZXIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.007775801215261613
+                },
+                "label": "IIYYIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007775801215261613
+                },
+                "label": "IZXXIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02362668181782927
+                },
+                "label": "IIYYXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02362668181782927
+                },
+                "label": "IZXXXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02362668181782927
+                },
+                "label": "IIYYYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02362668181782927
+                },
+                "label": "IZXXYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00014471220502114982
+                },
+                "label": "IYXYZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00014471220502114982
+                },
+                "label": "ZXXXZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.00014471220502114982
+                },
+                "label": "IYXYIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00014471220502114982
+                },
+                "label": "ZXXXIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0074922254367799064
+                },
+                "label": "YXXYIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0074922254367799064
+                },
+                "label": "XXXXIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007851094304547418
+                },
+                "label": "YXXYXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.007851094304547418
+                },
+                "label": "XXXXXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.007851094304547418
+                },
+                "label": "YXXYYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.007851094304547418
+                },
+                "label": "XXXXYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.11182041314444366
+                },
+                "label": "IIZZIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0016324327021487246
+                },
+                "label": "IIZZXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0016324327021487246
+                },
+                "label": "IIZZYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.027690486885108605
+                },
+                "label": "IIXIZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.027690486885108605
+                },
+                "label": "IZXZZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.027690486885108605
+                },
+                "label": "IIXIIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.027690486885108605
+                },
+                "label": "IZXZIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017085622490558363
+                },
+                "label": "IYYIIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017085622490558363
+                },
+                "label": "ZXXZIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.017467764981026104
+                },
+                "label": "IYYIXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.017467764981026104
+                },
+                "label": "ZXXZXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.017467764981026104
+                },
+                "label": "IYYIYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.017467764981026104
+                },
+                "label": "ZXXZYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017251005522152824
+                },
+                "label": "YXYIZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0017251005522152824
+                },
+                "label": "XXXZZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0017251005522152824
+                },
+                "label": "YXYIIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0017251005522152824
+                },
+                "label": "XXXZIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.12185473002947715
+                },
+                "label": "IZZIIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.009974489238835095
+                },
+                "label": "IZZIXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.009974489238835095
+                },
+                "label": "IZZIYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.030841363515106614
+                },
+                "label": "IXIIZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.030841363515106614
+                },
+                "label": "ZXZIZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.030841363515106614
+                },
+                "label": "IXIIIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.030841363515106614
+                },
+                "label": "ZXZIIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.009974489238835095
+                },
+                "label": "YYIIIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.009974489238835095
+                },
+                "label": "XXZIIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.026034177777900375
+                },
+                "label": "YYIIXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026034177777900375
+                },
+                "label": "XXZIXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026034177777900375
+                },
+                "label": "YYIIYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.026034177777900375
+                },
+                "label": "XXZIYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.11730633905418054
+                },
+                "label": "ZZIIIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.003816321460780337
+                },
+                "label": "ZZIIXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.003816321460780337
+                },
+                "label": "ZZIIYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028042079357516816
+                },
+                "label": "XIIIZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028042079357516816
+                },
+                "label": "XZIIZXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.028042079357516816
+                },
+                "label": "XIIIIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.028042079357516816
+                },
+                "label": "XZIIIXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1290616322646638
+                },
+                "label": "ZIIIIZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02906445652030368
+                },
+                "label": "ZIIIXXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02906445652030368
+                },
+                "label": "ZIIIYYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.09454094211785352
+                },
+                "label": "IIIIIZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.12129673767724887
+                },
+                "label": "IIIZZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03711229253298357
+                },
+                "label": "IIIXXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03711229253298357
+                },
+                "label": "IIZXXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03711229253298357
+                },
+                "label": "IIIXXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03711229253298357
+                },
+                "label": "IIZXXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004475630961619566
+                },
+                "label": "IIYYZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.004475630961619566
+                },
+                "label": "IZXXZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012847146388338941
+                },
+                "label": "IYXYXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.012847146388338941
+                },
+                "label": "ZXXXXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012847146388338941
+                },
+                "label": "IYXYXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.012847146388338941
+                },
+                "label": "ZXXXXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00857509399346711
+                },
+                "label": "YXXYZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.00857509399346711
+                },
+                "label": "XXXXZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.12033985876486
+                },
+                "label": "IIZZZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.025945989402781516
+                },
+                "label": "IIXIXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.025945989402781516
+                },
+                "label": "IZXZXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.025945989402781516
+                },
+                "label": "IIXIXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.025945989402781516
+                },
+                "label": "IZXZXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01235665651408317
+                },
+                "label": "IYYIZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01235665651408317
+                },
+                "label": "ZXXZZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.014056375487287444
+                },
+                "label": "YXYIXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.014056375487287444
+                },
+                "label": "XXXZXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.014056375487287444
+                },
+                "label": "YXYIXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.014056375487287444
+                },
+                "label": "XXXZXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.11730633905418054
+                },
+                "label": "IZZIZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.028042079357516816
+                },
+                "label": "IXIIXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028042079357516816
+                },
+                "label": "ZXZIXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.028042079357516816
+                },
+                "label": "IXIIXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028042079357516816
+                },
+                "label": "ZXZIXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.003816321460780337
+                },
+                "label": "YYIIZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.003816321460780337
+                },
+                "label": "XXZIZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.12992040474192834
+                },
+                "label": "ZZIIZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.041791911530589726
+                },
+                "label": "XIIIXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.041791911530589726
+                },
+                "label": "XZIIXZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.041791911530589726
+                },
+                "label": "XIIIXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.041791911530589726
+                },
+                "label": "XZIIXIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.13633285364844322
+                },
+                "label": "ZIIIZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.1438868787018699
+                },
+                "label": "IIIZZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02563111764011231
+                },
+                "label": "IIYYZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02563111764011231
+                },
+                "label": "IZXXZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0015599378602870757
+                },
+                "label": "YXXYZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0015599378602870757
+                },
+                "label": "XXXXZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1243560209584656
+                },
+                "label": "IIZZZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028676304856158442
+                },
+                "label": "IYYIZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028676304856158442
+                },
+                "label": "ZXXZZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1290616322646638
+                },
+                "label": "IZZIZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02906445652030368
+                },
+                "label": "YYIIZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02906445652030368
+                },
+                "label": "XXZIZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.13633285364844322
+                },
+                "label": "ZZIIZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.1697846750561176
+                },
+                "label": "ZIIIZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.07571732000886285
+                },
+                "label": "IIZIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.011214084150580589
+                },
+                "label": "ZXXIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.011214084150580589
+                },
+                "label": "IYYZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.09043824153408205
+                },
+                "label": "IZZZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.015062073020174772
+                },
+                "label": "XXZZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.015062073020174772
+                },
+                "label": "YYIZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.10210595262995932
+                },
+                "label": "ZZIZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.12534051311775987
+                },
+                "label": "ZIIZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02372354933892252
+                },
+                "label": "IZYYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02372354933892252
+                },
+                "label": "IIXXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0035566508717522816
+                },
+                "label": "XXYYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0035566508717522816
+                },
+                "label": "YXYXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.022222118336472155
+                },
+                "label": "ZXIXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.009360214778337735
+                },
+                "label": "IXZXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.012861903558134418
+                },
+                "label": "ZYIYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.012861903558134418
+                },
+                "label": "IYIYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.009360214778337735
+                },
+                "label": "ZXZXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.022222118336472155
+                },
+                "label": "IXIXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02806255237357539
+                },
+                "label": "XZZXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.020699736438547722
+                },
+                "label": "XIZXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0073628159350276725
+                },
+                "label": "YIIYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0073628159350276725
+                },
+                "label": "YZZYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.020699736438547722
+                },
+                "label": "XZIXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02806255237357539
+                },
+                "label": "XIIXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.016134456381049357
+                },
+                "label": "XYYXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.016134456381049357
+                },
+                "label": "YYYYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.004620343166640715
+                },
+                "label": "ZIXXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004620343166640715
+                },
+                "label": "ZZYYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.01778002333556489
+                },
+                "label": "ZZXXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.01778002333556489
+                },
+                "label": "ZIYYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.004272052394871832
+                },
+                "label": "YYXXIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.004272052394871832
+                },
+                "label": "XYXYIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.08069559131265681
+                },
+                "label": "IZIZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.003697495502321689
+                },
+                "label": "XXIZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.003697495502321689
+                },
+                "label": "YYZZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.09378119818275689
+                },
+                "label": "ZZZZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.10675006318856062
+                },
+                "label": "ZIZZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02939904913416444
+                },
+                "label": "ZYYZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02939904913416444
+                },
+                "label": "IXXIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02422088885056624
+                },
+                "label": "XIXZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.008478224421755413
+                },
+                "label": "XZXZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.015742664428810817
+                },
+                "label": "YIYZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.015742664428810817
+                },
+                "label": "YIYIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.008478224421755413
+                },
+                "label": "XZXIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02422088885056624
+                },
+                "label": "XIXIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.014619929368870995
+                },
+                "label": "IXXZIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.014619929368870995
+                },
+                "label": "ZYYIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.08646497553907394
+                },
+                "label": "ZIZIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.10302745448676344
+                },
+                "label": "ZZZIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03185840081829715
+                },
+                "label": "YYZIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03185840081829715
+                },
+                "label": "XXIIIIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.09454094211785352
+                },
+                "label": "IZIIIIII"
+            }
+        ]
+    }
+}
+2020-03-19 15:57:11,197:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "energy_state_schema",
+    "properties": {
+        "aux_ops": {
+            "default": null,
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "qubit_op": {
+            "default": {},
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:57:12,490:qiskit.aqua.operators.weighted_pauli_operator:INFO: Operator is empty, can not do two qubit reduction. Return the empty operator back.
+2020-03-19 15:57:12,531:qiskit.aqua.operators.weighted_pauli_operator:INFO: Operator is empty, can not do two qubit reduction. Return the empty operator back.
+2020-03-19 15:57:13,089:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "disp": false,
+    "eps": 1.4901161193847656e-08,
+    "ftol": 1e-06,
+    "maxiter": 50000,
+    "tol": null
+}
+2020-03-19 15:57:13,089:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "cobyla_schema",
+    "properties": {
+        "disp": {
+            "default": false,
+            "type": "boolean"
+        },
+        "eps": {
+            "default": 1.4901161193847656e-08,
+            "type": "number"
+        },
+        "ftol": {
+            "default": 1e-06,
+            "type": "number"
+        },
+        "maxiter": {
+            "default": 100,
+            "type": "integer"
+        },
+        "tol": {
+            "default": null,
+            "type": [
+                "number",
+                "null"
+            ]
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:57:13,091:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "num_orbitals": 10,
+    "num_particles": [
+        3,
+        2
+    ],
+    "qubit_mapping": "parity",
+    "two_qubit_reduction": true
+}
+2020-03-19 15:57:13,091:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "hf_state_schema",
+    "properties": {
+        "num_orbitals": {
+            "default": 4,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "num_particles": {
+            "contains": {
+                "type": "integer"
+            },
+            "default": [
+                1,
+                1
+            ],
+            "maxItems": 2,
+            "minItems": 2,
+            "type": [
+                "array",
+                "integer"
+            ]
+        },
+        "qubit_mapping": {
+            "default": "parity",
+            "enum": [
+                "jordan_wigner",
+                "parity",
+                "bravyi_kitaev"
+            ],
+            "type": "string"
+        },
+        "two_qubit_reduction": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:57:13,093:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "active_occupied": null,
+    "active_unoccupied": null,
+    "depth": 1,
+    "num_orbitals": 10,
+    "num_particles": [
+        3,
+        2
+    ],
+    "num_time_slices": 1,
+    "qubit_mapping": "parity",
+    "two_qubit_reduction": true
+}
+2020-03-19 15:57:13,093:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "uccsd_schema",
+    "properties": {
+        "active_occupied": {
+            "default": null,
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "active_unoccupied": {
+            "default": null,
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "depth": {
+            "default": 1,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "num_orbitals": {
+            "default": 4,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "num_particles": {
+            "contains": {
+                "type": "integer"
+            },
+            "default": [
+                1,
+                1
+            ],
+            "maxItems": 2,
+            "minItems": 2,
+            "type": [
+                "array",
+                "integer"
+            ]
+        },
+        "num_time_slices": {
+            "default": 1,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "qubit_mapping": {
+            "default": "parity",
+            "enum": [
+                "jordan_wigner",
+                "parity",
+                "bravyi_kitaev"
+            ],
+            "type": "string"
+        },
+        "two_qubit_reduction": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:57:13,789:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "initial_point": null,
+    "max_evals_grouped": 1
+}
+2020-03-19 15:57:13,789:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "vqe_schema",
+    "properties": {
+        "initial_point": {
+            "default": null,
+            "items": {
+                "type": "number"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "max_evals_grouped": {
+            "default": 1,
+            "type": "integer"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:57:13,794:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: 
+==================== Setting of VQE ============================
+Algorithm: VQE
+-- quantum_instance: None
+-- var_form: <qiskit.chemistry.components.variational_forms.uccsd.UCCSD object at 0x7fbfee2b97f0>
+-- optimizer: <qiskit.aqua.components.optimizers.slsqp.SLSQP object at 0x7fbfee3b9208>
+-- cost_fn: <bound method VQE._energy_evaluation of <qiskit.aqua.algorithms.adaptive.vqe.vqe.VQE object at 0x7fbfee33a828>>
+-- initial_point: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0.]
+-- parameterized_circuits: None
+-- use_simulator_snapshot_mode: None
+-- ret: None
+-- eval_time: None
+-- callback: None
+-- operator: Representation: paulis, qubits: 7, size: 435
+-- eval_count: 0
+-- aux_operators: []
+-- auto_conversion: True
+===============================================================
+Variational Form: UCCSD
+-- num_parameters: 28
+-- num_qubits: 7
+-- bounds: [(-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793)]
+-- support_parameterized_circuit: True
+-- z2_symmetries: Z2 symmetries:
+Symmetries:
+ZZZZZZZZ
+Single-Qubit Pauli X:
+IIIIIIIX
+Cliffords:
+ZZZZZZZZ	(0.7071067811865475+0j)
+IIIIIIIX	(0.7071067811865475+0j)
+
+Qubit index:
+[0]
+Tapering values:
+[1]
+-- depth: 1
+-- num_orbitals: 10
+-- num_alpha: 3
+-- num_beta: 2
+-- num_particles: [3, 2]
+-- initial_state: <qiskit.chemistry.components.initial_states.hartree_fock.HartreeFock object at 0x7fbfee2b9278>
+-- qubit_mapping: parity
+-- two_qubit_reduction: True
+-- num_time_slices: 1
+-- shallow_circuit_concat: False
+-- single_excitations: [[0, 4], [1, 3], [2, 4], [5, 7], [5, 9], [6, 8]]
+-- double_excitations: [[0, 3, 5, 8], [0, 3, 6, 7], [0, 3, 6, 9], [0, 4, 5, 7], [0, 4, 5, 9], [0, 4, 6, 8], [1, 3, 5, 7], [1, 3, 5, 9], [1, 3, 6, 8], [1, 4, 5, 8], [1, 4, 6, 7], [1, 4, 6, 9], [2, 3, 5, 8], [2, 3, 6, 7], [2, 3, 6, 9], [2, 4, 5, 7], [2, 4, 5, 9], [2, 4, 6, 8], [0, 3, 1, 4], [1, 3, 2, 4], [5, 7, 6, 8], [5, 8, 6, 9]]
+-- hopping_ops: [<qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee33a198>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee33a7b8>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee33a470>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2dd7f0>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2b9898>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee33a1d0>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2ddd68>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2d1208>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2d1550>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2e7898>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2d1780>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2b9a90>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee33af28>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2b9978>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee35e898>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2e7be0>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee48d198>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee48d710>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee299e80>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee2999e8>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee299ef0>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee48d978>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee376d30>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee299710>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee299da0>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee3cb8d0>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee3cb400>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7fbfee34ea58>]
+-- excitation_pool: None
+-- logging_construct_circuit: True
+===============================================================
+Optimizer: SLSQP
+-- gradient_support_level: 2
+-- bounds_support_level: 2
+-- initial_point_support_level: 3
+-- options: {'eps': 1.4901161193847656e-08, 'ftol': 1e-06, 'disp': False, 'maxiter': 50000}
+-- max_evals_grouped: 1
+-- tol: None
+===============================================================
+
+2020-03-19 15:57:13,796:qiskit.aqua.quantum_instance:INFO: statevector backend only works with shot=1, change shots from 1024 to 1.
+2020-03-19 15:57:13,798:qiskit.aqua.quantum_instance:INFO: 
+Qiskit Terra version: 0.12.0
+Backend: 'statevector_simulator (AerProvider)', with following setting:
+{'basis_gates': ['u1', 'u2', 'u3', 'cx', 'cz', 'id', 'x', 'y', 'z', 'h', 's', 'sdg', 't', 'tdg', 'swap', 'ccx', 'unitary', 'initialize', 'cu1', 'cu2', 'cu3', 'cswap', 'mcx', 'mcy', 'mcz', 'mcu1', 'mcu2', 'mcu3', 'mcswap', 'multiplexer'], 'coupling_map': None}
+{'pass_manager': None, 'initial_layout': None, 'seed_transpiler': None, 'optimization_level': 1}
+RunConfig(max_credits=10, shots=1)
+{'timeout': None}
+{}
+{}
+Measurement mitigation: None
+2020-03-19 15:57:13,799:qiskit.aqua.algorithms.adaptive.vq_algorithm:INFO: Starting optimizer.
+bounds=[(-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793)]
+initial point=[0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0.]
+2020-03-19 15:57:15,846:qiskit.aqua.quantum_instance:DEBUG: ==== Before transpiler ====
+2020-03-19 15:57:15,846:qiskit.aqua.quantum_instance:DEBUG: Submitting 1 circuits.
+============================================================================
+0-th circuit: 7 qubits, 0 classical bits and 33 operations with depth 29
+op_counts: OrderedDict([('Evolution^1', 28), ('u3', 5), ('snapshot', 1)])
+============================================================================
+
+2020-03-19 15:57:15,846:qiskit.aqua.quantum_instance:DEBUG: ====  After transpiler ====
+2020-03-19 15:57:15,851:qiskit.aqua.quantum_instance:DEBUG: Submitting 1 circuits.
+============================================================================
+0-th circuit: 7 qubits, 0 classical bits and 1925 operations with depth 1678
+op_counts: OrderedDict([('cx', 1372), ('u2', 214), ('u1', 184), ('u3', 155), ('snapshot', 1)])
+============================================================================
+
+2020-03-19 15:57:16,073:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 1 returned -7.12108188562846
+2020-03-19 15:57:16,222:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 2 returned -7.12108188562846
+2020-03-19 15:57:16,370:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 3 returned -7.121081887036715
+2020-03-19 15:57:16,519:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 4 returned -7.1210818872789465
+2020-03-19 15:57:16,722:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 5 returned -7.121081885628466
+2020-03-19 15:57:16,872:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 6 returned -7.121081885628471
+2020-03-19 15:57:17,028:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 7 returned -7.12108188422021
+2020-03-19 15:57:17,243:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 8 returned -7.121081883977983
+2020-03-19 15:57:17,394:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 9 returned -7.121081883340743
+2020-03-19 15:57:17,542:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 10 returned -7.121081886261928
+2020-03-19 15:57:17,691:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 11 returned -7.121081883671949
+2020-03-19 15:57:17,898:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 12 returned -7.121081884673315
+2020-03-19 15:57:18,053:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 13 returned -7.121081883417564
+2020-03-19 15:57:18,201:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 14 returned -7.121081884549653
+2020-03-19 15:57:18,349:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 15 returned -7.121081887795185
+2020-03-19 15:57:18,560:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 16 returned -7.121081884549638
+2020-03-19 15:57:18,708:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 17 returned -7.121081882462425
+2020-03-19 15:57:18,856:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 18 returned -7.121081883671929
+2020-03-19 15:57:19,011:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 19 returned -7.121081885874629
+2020-03-19 15:57:19,219:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 20 returned -7.121081883529661
+2020-03-19 15:57:19,368:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 21 returned -7.121081885645718
+2020-03-19 15:57:19,515:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 22 returned -7.12108188232749
+2020-03-19 15:57:19,663:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 23 returned -7.121081885834107
+2020-03-19 15:57:19,871:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 24 returned -7.121081882811939
+2020-03-19 15:57:20,021:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 25 returned -7.121081884692535
+2020-03-19 15:57:20,173:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 26 returned -7.121081887710775
+2020-03-19 15:57:20,321:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 27 returned -7.121081884750748
+2020-03-19 15:57:20,527:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 28 returned -7.1210818875051265
+2020-03-19 15:57:20,676:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 29 returned -7.12108188716172
+2020-03-19 15:57:20,823:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 30 returned -7.121081884750748
+2020-03-19 15:57:20,996:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 31 returned -6.675041947535306
+2020-03-19 15:57:21,222:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 32 returned -7.161635680119412
+2020-03-19 15:57:21,374:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 33 returned -7.161635680119412
+2020-03-19 15:57:21,526:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 34 returned -7.161635680216487
+2020-03-19 15:57:21,679:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 35 returned -7.16163568096314
+2020-03-19 15:57:21,890:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 36 returned -7.161635680036546
+2020-03-19 15:57:22,047:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 37 returned -7.161635680277202
+2020-03-19 15:57:22,201:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 38 returned -7.161635680027224
+2020-03-19 15:57:22,352:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 39 returned -7.161635679162114
+2020-03-19 15:57:22,563:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 40 returned -7.1616356804356
+2020-03-19 15:57:22,716:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 41 returned -7.161635680227998
+2020-03-19 15:57:22,869:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 42 returned -7.161635680435737
+2020-03-19 15:57:23,087:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 43 returned -7.161635680510848
+2020-03-19 15:57:23,249:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 44 returned -7.16163568191369
+2020-03-19 15:57:23,401:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 45 returned -7.161635680279148
+2020-03-19 15:57:23,554:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 46 returned -7.161635680300458
+2020-03-19 15:57:23,768:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 47 returned -7.161635680189857
+2020-03-19 15:57:23,921:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 48 returned -7.161635679579711
+2020-03-19 15:57:24,099:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 49 returned -7.1616356807340855
+2020-03-19 15:57:24,253:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 50 returned -7.161635680686692
+2020-03-19 15:57:24,467:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 51 returned -7.16163568176294
+2020-03-19 15:57:24,620:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 52 returned -7.161635680638632
+2020-03-19 15:57:24,774:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 53 returned -7.161635678353566
+2020-03-19 15:57:24,928:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 54 returned -7.161635680044201
+2020-03-19 15:57:25,149:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 55 returned -7.16163567983126
+2020-03-19 15:57:25,323:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 56 returned -7.161635680878651
+2020-03-19 15:57:25,477:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 57 returned -7.161635679451746
+2020-03-19 15:57:25,630:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 58 returned -7.16163568055473
+2020-03-19 15:57:25,842:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 59 returned -7.16163567952002
+2020-03-19 15:57:25,998:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 60 returned -7.1616356801895575
+2020-03-19 15:57:26,158:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 61 returned -7.16163568058627
+2020-03-19 15:57:26,325:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 62 returned -7.084436050748895
+2020-03-19 15:57:26,552:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 63 returned -7.168241160613002
+2020-03-19 15:57:26,709:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 64 returned -7.168241160613002
+2020-03-19 15:57:26,880:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 65 returned -7.168241160399086
+2020-03-19 15:57:27,041:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 66 returned -7.1682411609357155
+2020-03-19 15:57:27,256:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 67 returned -7.168241160530824
+2020-03-19 15:57:27,407:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 68 returned -7.1682411607676695
+2020-03-19 15:57:27,560:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 69 returned -7.168241160784654
+2020-03-19 15:57:27,713:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 70 returned -7.1682411602710046
+2020-03-19 15:57:27,923:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 71 returned -7.168241160991488
+2020-03-19 15:57:28,082:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 72 returned -7.1682411605476
+2020-03-19 15:57:28,236:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 73 returned -7.168241160932706
+2020-03-19 15:57:28,387:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 74 returned -7.168241160758905
+2020-03-19 15:57:28,596:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 75 returned -7.168241159852414
+2020-03-19 15:57:28,750:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 76 returned -7.168241160924668
+2020-03-19 15:57:28,903:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 77 returned -7.168241160334827
+2020-03-19 15:57:29,120:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 78 returned -7.16824116095231
+2020-03-19 15:57:29,276:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 79 returned -7.168241160952022
+2020-03-19 15:57:29,428:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 80 returned -7.168241160884058
+2020-03-19 15:57:29,581:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 81 returned -7.16824116052388
+2020-03-19 15:57:29,796:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 82 returned -7.168241160145938
+2020-03-19 15:57:29,949:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 83 returned -7.168241160705498
+2020-03-19 15:57:30,109:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 84 returned -7.1682411599239835
+2020-03-19 15:57:30,263:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 85 returned -7.168241160595825
+2020-03-19 15:57:30,478:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 86 returned -7.168241161075759
+2020-03-19 15:57:30,631:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 87 returned -7.16824116051583
+2020-03-19 15:57:30,783:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 88 returned -7.168241160200075
+2020-03-19 15:57:30,938:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 89 returned -7.168241160703226
+2020-03-19 15:57:31,155:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 90 returned -7.168241160194018
+2020-03-19 15:57:31,324:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 91 returned -7.168241160382633
+2020-03-19 15:57:31,481:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 92 returned -7.168241160684181
+2020-03-19 15:57:31,650:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 93 returned -7.15083918248035
+2020-03-19 15:57:31,875:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 94 returned -7.169619113597784
+2020-03-19 15:57:32,032:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 95 returned -7.169619113597784
+2020-03-19 15:57:32,186:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 96 returned -7.169619113522621
+2020-03-19 15:57:32,337:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 97 returned -7.169619113638631
+2020-03-19 15:57:32,553:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 98 returned -7.169619113471321
+2020-03-19 15:57:32,706:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 99 returned -7.169619113790189
+2020-03-19 15:57:32,858:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 100 returned -7.169619113701905
+2020-03-19 15:57:33,015:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 101 returned -7.169619113531853
+2020-03-19 15:57:33,230:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 102 returned -7.169619113752558
+2020-03-19 15:57:33,383:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 103 returned -7.1696191135093725
+2020-03-19 15:57:33,538:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 104 returned -7.169619113427014
+2020-03-19 15:57:33,690:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 105 returned -7.169619113533136
+2020-03-19 15:57:33,900:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 106 returned -7.169619113901945
+2020-03-19 15:57:34,059:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 107 returned -7.169619113493678
+2020-03-19 15:57:34,213:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 108 returned -7.169619113364447
+2020-03-19 15:57:34,383:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 109 returned -7.169619113516989
+2020-03-19 15:57:34,594:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 110 returned -7.1696191139344325
+2020-03-19 15:57:34,747:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 111 returned -7.169619113455426
+2020-03-19 15:57:34,900:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 112 returned -7.169619113489105
+2020-03-19 15:57:35,120:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 113 returned -7.169619113715905
+2020-03-19 15:57:35,277:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 114 returned -7.1696191135246155
+2020-03-19 15:57:35,430:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 115 returned -7.169619113502722
+2020-03-19 15:57:35,583:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 116 returned -7.169619113621543
+2020-03-19 15:57:35,798:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 117 returned -7.169619113770328
+2020-03-19 15:57:35,954:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 118 returned -7.169619113436461
+2020-03-19 15:57:36,111:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 119 returned -7.169619113629491
+2020-03-19 15:57:36,266:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 120 returned -7.16961911353239
+2020-03-19 15:57:36,484:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 121 returned -7.1696191136130745
+2020-03-19 15:57:36,638:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 122 returned -7.169619113455688
+2020-03-19 15:57:36,793:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 123 returned -7.169619113529494
+2020-03-19 15:57:36,967:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 124 returned -7.166458424842527
+2020-03-19 15:57:37,200:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 125 returned -7.169862492572891
+2020-03-19 15:57:37,352:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 126 returned -7.169862492572891
+2020-03-19 15:57:37,505:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 127 returned -7.169862492555632
+2020-03-19 15:57:37,658:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 128 returned -7.1698624925482
+2020-03-19 15:57:37,873:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 129 returned -7.169862492497024
+2020-03-19 15:57:38,033:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 130 returned -7.169862492748733
+2020-03-19 15:57:38,187:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 131 returned -7.169862492593828
+2020-03-19 15:57:38,340:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 132 returned -7.169862492588851
+2020-03-19 15:57:38,556:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 133 returned -7.169862492533514
+2020-03-19 15:57:38,709:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 134 returned -7.169862492497278
+2020-03-19 15:57:38,862:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 135 returned -7.169862492641711
+2020-03-19 15:57:39,021:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 136 returned -7.16986249257458
+2020-03-19 15:57:39,236:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 137 returned -7.169862492593091
+2020-03-19 15:57:39,389:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 138 returned -7.16986249262883
+2020-03-19 15:57:39,547:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 139 returned -7.169862492442187
+2020-03-19 15:57:39,701:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 140 returned -7.169862492619337
+2020-03-19 15:57:39,916:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 141 returned -7.169862492609177
+2020-03-19 15:57:40,072:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 142 returned -7.169862492693832
+2020-03-19 15:57:40,227:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 143 returned -7.169862492596948
+2020-03-19 15:57:40,381:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 144 returned -7.169862492647225
+2020-03-19 15:57:40,596:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 145 returned -7.169862492570881
+2020-03-19 15:57:40,751:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 146 returned -7.169862492642508
+2020-03-19 15:57:40,906:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 147 returned -7.169862492513825
+2020-03-19 15:57:41,064:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 148 returned -7.169862492577835
+2020-03-19 15:57:41,280:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 149 returned -7.169862492709754
+2020-03-19 15:57:41,435:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 150 returned -7.169862492534628
+2020-03-19 15:57:41,590:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 151 returned -7.169862492592216
+2020-03-19 15:57:41,807:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 152 returned -7.169862492611372
+2020-03-19 15:57:41,963:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 153 returned -7.169862492532306
+2020-03-19 15:57:42,121:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 154 returned -7.169862492594468
+2020-03-19 15:57:42,290:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 155 returned -7.169611680150091
+2020-03-19 15:57:42,521:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 156 returned -7.169934003184113
+2020-03-19 15:57:42,674:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 157 returned -7.169934003184113
+2020-03-19 15:57:42,827:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 158 returned -7.169934003167469
+2020-03-19 15:57:42,982:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 159 returned -7.169934003170025
+2020-03-19 15:57:43,206:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 160 returned -7.169934003188519
+2020-03-19 15:57:43,360:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 161 returned -7.169934003280103
+2020-03-19 15:57:43,514:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 162 returned -7.169934003182211
+2020-03-19 15:57:43,667:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 163 returned -7.169934003207057
+2020-03-19 15:57:43,884:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 164 returned -7.169934003244164
+2020-03-19 15:57:44,041:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 165 returned -7.169934003192581
+2020-03-19 15:57:44,197:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 166 returned -7.16993400324238
+2020-03-19 15:57:44,352:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 167 returned -7.169934003207874
+2020-03-19 15:57:44,568:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 168 returned -7.169934003229303
+2020-03-19 15:57:44,722:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 169 returned -7.169934003195197
+2020-03-19 15:57:44,877:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 170 returned -7.169934003197903
+2020-03-19 15:57:45,034:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 171 returned -7.16993400319319
+2020-03-19 15:57:45,269:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 172 returned -7.16993400317242
+2020-03-19 15:57:45,423:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 173 returned -7.1699340031954195
+2020-03-19 15:57:45,576:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 174 returned -7.169934003182694
+2020-03-19 15:57:45,730:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 175 returned -7.169934003212241
+2020-03-19 15:57:45,943:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 176 returned -7.169934003171149
+2020-03-19 15:57:46,101:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 177 returned -7.169934003240425
+2020-03-19 15:57:46,257:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 178 returned -7.1699340031983425
+2020-03-19 15:57:46,410:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 179 returned -7.16993400320932
+2020-03-19 15:57:46,622:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 180 returned -7.169934003120421
+2020-03-19 15:57:46,775:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 181 returned -7.169934003129176
+2020-03-19 15:57:46,934:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 182 returned -7.169934003225124
+2020-03-19 15:57:47,160:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 183 returned -7.169934003114124
+2020-03-19 15:57:47,313:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 184 returned -7.169934003205258
+2020-03-19 15:57:47,468:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 185 returned -7.169934003216134
+2020-03-19 15:57:47,635:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 186 returned -7.169871435765515
+2020-03-19 15:57:47,867:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 187 returned -7.169958420753862
+2020-03-19 15:57:48,025:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 188 returned -7.169958420753862
+2020-03-19 15:57:48,181:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 189 returned -7.169958420748201
+2020-03-19 15:57:48,336:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 190 returned -7.169958420752312
+2020-03-19 15:57:48,554:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 191 returned -7.169958420776882
+2020-03-19 15:57:48,708:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 192 returned -7.169958420776377
+2020-03-19 15:57:48,861:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 193 returned -7.169958420763188
+2020-03-19 15:57:49,020:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 194 returned -7.169958420764064
+2020-03-19 15:57:49,237:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 195 returned -7.169958420780454
+2020-03-19 15:57:49,393:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 196 returned -7.169958420775493
+2020-03-19 15:57:49,551:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 197 returned -7.169958420732967
+2020-03-19 15:57:49,706:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 198 returned -7.169958420760649
+2020-03-19 15:57:49,922:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 199 returned -7.169958420758681
+2020-03-19 15:57:50,079:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 200 returned -7.1699584207517475
+2020-03-19 15:57:50,237:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 201 returned -7.169958420770703
+2020-03-19 15:57:50,390:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 202 returned -7.169958420768133
+2020-03-19 15:57:50,613:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 203 returned -7.16995842077269
+2020-03-19 15:57:50,765:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 204 returned -7.169958420756922
+2020-03-19 15:57:50,919:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 205 returned -7.169958420741818
+2020-03-19 15:57:51,075:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 206 returned -7.169958420768323
+2020-03-19 15:57:51,294:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 207 returned -7.169958420754379
+2020-03-19 15:57:51,448:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 208 returned -7.169958420766099
+2020-03-19 15:57:51,601:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 209 returned -7.169958420765097
+2020-03-19 15:57:51,757:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 210 returned -7.169958420792586
+2020-03-19 15:57:51,974:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 211 returned -7.169958420816249
+2020-03-19 15:57:52,131:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 212 returned -7.16995842074285
+2020-03-19 15:57:52,285:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 213 returned -7.169958420738681
+2020-03-19 15:57:52,438:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 214 returned -7.169958420727828
+2020-03-19 15:57:52,650:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 215 returned -7.1699584207628035
+2020-03-19 15:57:52,804:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 216 returned -7.169958420746942
+2020-03-19 15:57:52,972:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 217 returned -7.169904485983853
+2020-03-19 15:57:53,209:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 218 returned -7.169963156856489
+2020-03-19 15:57:53,367:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 219 returned -7.169963156856489
+2020-03-19 15:57:53,521:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 220 returned -7.1699631568551085
+2020-03-19 15:57:53,672:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 221 returned -7.169963156855964
+2020-03-19 15:57:53,901:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 222 returned -7.169963156867174
+2020-03-19 15:57:54,060:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 223 returned -7.169963156854714
+2020-03-19 15:57:54,215:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 224 returned -7.169963156863745
+2020-03-19 15:57:54,371:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 225 returned -7.169963156860116
+2020-03-19 15:57:54,591:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 226 returned -7.169963156854449
+2020-03-19 15:57:54,743:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 227 returned -7.1699631568594695
+2020-03-19 15:57:54,897:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 228 returned -7.169963156863132
+2020-03-19 15:57:55,054:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 229 returned -7.169963156865478
+2020-03-19 15:57:55,291:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 230 returned -7.169963156863806
+2020-03-19 15:57:55,447:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 231 returned -7.169963156864834
+2020-03-19 15:57:55,603:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 232 returned -7.169963156850397
+2020-03-19 15:57:55,755:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 233 returned -7.169963156861308
+2020-03-19 15:57:55,969:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 234 returned -7.169963156866706
+2020-03-19 15:57:56,129:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 235 returned -7.16996315686794
+2020-03-19 15:57:56,284:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 236 returned -7.169963156860318
+2020-03-19 15:57:56,438:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 237 returned -7.169963156865226
+2020-03-19 15:57:56,655:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 238 returned -7.169963156858175
+2020-03-19 15:57:56,811:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 239 returned -7.169963156859311
+2020-03-19 15:57:56,996:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 240 returned -7.169963156857411
+2020-03-19 15:57:57,154:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 241 returned -7.169963156867083
+2020-03-19 15:57:57,370:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 242 returned -7.169963156851771
+2020-03-19 15:57:57,527:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 243 returned -7.169963156857383
+2020-03-19 15:57:57,687:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 244 returned -7.169963156856597
+2020-03-19 15:57:57,841:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 245 returned -7.169963156854777
+2020-03-19 15:57:58,062:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 246 returned -7.169963156854187
+2020-03-19 15:57:58,217:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 247 returned -7.169963156855335
+2020-03-19 15:57:58,385:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 248 returned -7.169960082893581
+2020-03-19 15:57:58,554:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 249 returned -7.169963503828019
+2020-03-19 15:57:58,555:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Optimization complete in 44.75610899925232 seconds.
+Found opt_params [ 0.02371126  0.05250683 -0.00695131  0.01747017 -0.02403553 -0.05505408
+ -0.03036135  0.01002744 -0.02861666 -0.01056602 -0.01976107 -0.01370676
+  0.03383791 -0.01438432 -0.05897827 -0.0232209   0.01122339 -0.01733099
+  0.0087112  -0.10576116  0.00188932 -0.04849056 -0.00791844  0.0215552
+ -0.00873028  0.01971904  0.02473513 -0.00866667] in 249 evals
+{'energy': -2.550162456113733, 'nuclear_repulsion_energy': 4.619801047714287, 'hf_energy': -2.5012808379142424, 'energies': [-2.550162456113733], 'algorithm_retvals': {'num_optimizer_evals': 249, 'min_val': -7.169963503828019, 'opt_params': array([ 0.02371126,  0.05250683, -0.00695131,  0.01747017, -0.02403553,
+       -0.05505408, -0.03036135,  0.01002744, -0.02861666, -0.01056602,
+       -0.01976107, -0.01370676,  0.03383791, -0.01438432, -0.05897827,
+       -0.0232209 ,  0.01122339, -0.01733099,  0.0087112 , -0.10576116,
+        0.00188932, -0.04849056, -0.00791844,  0.0215552 , -0.00873028,
+        0.01971904,  0.02473513, -0.00866667]), 'eval_time': 44.75610899925232, 'eval_count': 249, 'energy': -7.169963503828019, 'eigvals': array([-7.1699635]), 'min_vector': array([ 1.80715138e-18-5.63785130e-17j, -1.71671147e-02-9.40804619e-04j,
+        8.24883222e-18-1.34441069e-17j,  1.53622266e-04+8.41891839e-06j,
+       -1.86044578e-03-1.01957494e-04j,  2.82718823e-02+1.54937611e-03j,
+        6.75531765e-18+9.60603125e-17j,  1.50727819e-16+1.60719420e-16j,
+       -7.62413648e-03-4.17823434e-04j, -2.00414098e-02-1.09832382e-03j,
+        1.60887401e-03+8.81706757e-05j, -7.71731063e-04-4.22929631e-05j,
+        3.72676025e-17-1.73553663e-16j,  1.55412167e-02+8.51700982e-04j,
+       -2.36514370e-02-1.29616313e-03j, -2.36830412e-18+8.02309608e-18j,
+        2.63870214e-17+6.94581918e-17j, -4.25920162e-17-4.07089402e-17j,
+        2.05012111e-17-6.57878707e-17j,  3.88402389e-17-2.83659282e-17j,
+        1.31125336e-16-1.07330539e-18j,  1.50406501e-17+1.30713264e-16j,
+        1.24388428e-16-7.11448145e-17j, -4.41612462e-17-4.92067398e-17j,
+        7.15669460e-17-4.48588649e-18j, -3.18158664e-05-1.74359609e-06j,
+        2.21455950e-17-1.57658242e-17j,  3.60178980e-03+1.97387886e-04j,
+        2.48030773e-03+1.35927616e-04j,  2.57777625e-04+1.41269156e-05j,
+       -3.28817547e-17-2.71809485e-16j,  1.61546124e-17+6.61363325e-17j,
+       -8.44844673e-17-2.45326947e-17j,  2.07793724e-17+1.30104261e-17j,
+       -2.71979899e-17-8.22228595e-18j,  3.66379418e-17-4.35442698e-17j,
+       -9.05564795e-17+3.02275566e-16j, -2.77222104e-17+2.37331856e-16j,
+        6.79248984e-17+1.26343378e-16j, -2.78267264e-17+7.75441723e-17j,
+        3.13856275e-17-2.67147415e-16j,  1.39116696e-17-5.39932682e-17j,
+        2.30406985e-17+6.00546360e-18j, -9.31597191e-18+2.00712927e-17j,
+        1.58542539e-16-4.41588504e-17j, -6.82345395e-18-1.44415729e-16j,
+       -1.39356545e-17-1.74014449e-17j, -5.55653613e-18-2.86771475e-17j,
+        2.33954008e-17-1.30619257e-16j,  3.13033547e-17-1.10046521e-16j,
+       -2.77884987e-17+4.81927866e-17j, -7.45297966e-17+1.16009632e-17j,
+       -1.79314601e-16-1.07028042e-16j, -1.28544725e-16+2.43728648e-16j,
+        1.66863297e-15-3.79210552e-15j,  2.66289060e-17+1.20672330e-16j,
+       -1.46615872e-04-8.03494892e-06j,  1.64462678e-03+9.01300247e-05j,
+       -2.76058565e-03-1.51287609e-04j,  1.30225265e-04+7.13669902e-06j,
+       -1.12569643e-16+7.25739959e-17j, -2.71691958e-03-1.48894589e-04j,
+        9.81469375e-03+5.37871935e-04j, -1.42599493e-18-6.30035489e-17j,
+       -2.15835525e-02-1.18283743e-03j,  1.49095363e-02+8.17083176e-04j,
+       -2.65092493e-03-1.45277903e-04j, -4.73216175e-04-2.59335346e-05j,
+        1.78899602e-16+5.09554692e-16j, -6.12035637e-02-3.35412190e-03j,
+        5.47058179e-02+2.99802774e-03j, -6.39611519e-17-1.11266248e-16j,
+       -5.85213330e-17-5.56195714e-17j,  2.28678392e-02+1.25321984e-03j,
+        2.68828150e-17+3.61852475e-18j, -5.27261340e-06-2.88953568e-07j,
+        8.62777484e-03+4.72825548e-04j, -3.01560761e-02-1.65263506e-03j,
+       -1.66454087e-16+1.94939551e-16j, -6.02271130e-17-2.12991517e-16j,
+        3.45518088e-17-6.97648505e-17j,  2.34833470e-17+4.41588504e-17j,
+       -4.10748942e-17-6.73019979e-17j, -1.01724435e-16-9.09242996e-17j,
+        5.68851858e-17-1.87368456e-16j, -7.59219818e-17+2.05077994e-16j,
+        1.77160555e-15-4.00618904e-15j,  2.22647692e-16+3.34069794e-18j,
+       -2.86157140e-03-1.56821903e-04j, -8.96142778e-04-4.91110638e-05j,
+       -2.28157270e-04-1.25036395e-05j, -6.71019894e-03-3.67737169e-04j,
+        5.57196685e-17-1.78147969e-16j, -1.63542019e-03-8.96254784e-05j,
+       -2.32414477e-02-1.27369460e-03j,  9.71859093e-18-2.80438923e-17j,
+        3.49590899e-17+3.43457725e-17j,  1.11181938e-02+6.09307288e-04j,
+        2.54370982e-17+1.28547487e-16j,  2.41130677e-03+1.32146175e-04j,
+        1.04556094e-01+5.72995855e-03j, -9.94284976e-03-5.44895233e-04j,
+        2.72450907e-15-5.10770703e-15j, -3.70526092e-17+1.74339709e-16j,
+       -4.78603426e-02-2.62287706e-03j, -1.00968026e-02-5.53332266e-04j,
+       -4.17888980e-04-2.29014537e-05j, -2.43370340e-03-1.33373571e-04j,
+       -1.31863234e-17+2.99298875e-16j, -3.44011651e-02-1.88527750e-03j,
+        1.72443167e-02+9.45035496e-04j, -1.41108913e-16-1.08420217e-18j,
+        6.96310308e-03+3.81597004e-04j, -2.33430225e-02-1.27926118e-03j,
+        9.81110143e-03+5.37675067e-04j, -1.88672751e-02-1.03397804e-03j,
+        1.77122768e-15-4.89896274e-15j,  5.22059385e-02+2.86102755e-03j,
+       -9.82935670e-01-5.38675505e-02j, -1.94608587e-16-1.69525932e-15j,
+        2.54385855e-17-1.59547126e-17j, -6.26724044e-17-6.98226199e-17j,
+        3.94742228e-17+2.00577402e-18j, -1.24281044e-17-8.15637671e-17j,
+       -1.25604822e-16-4.29886161e-17j,  1.60553093e-17-5.16757860e-17j,
+       -7.60709179e-16-3.10038453e-15j, -7.69783542e-17+1.04083409e-17j]), 'eigvecs': array([[ 1.80715138e-18-5.63785130e-17j, -1.71671147e-02-9.40804619e-04j,
+         8.24883222e-18-1.34441069e-17j,  1.53622266e-04+8.41891839e-06j,
+        -1.86044578e-03-1.01957494e-04j,  2.82718823e-02+1.54937611e-03j,
+         6.75531765e-18+9.60603125e-17j,  1.50727819e-16+1.60719420e-16j,
+        -7.62413648e-03-4.17823434e-04j, -2.00414098e-02-1.09832382e-03j,
+         1.60887401e-03+8.81706757e-05j, -7.71731063e-04-4.22929631e-05j,
+         3.72676025e-17-1.73553663e-16j,  1.55412167e-02+8.51700982e-04j,
+        -2.36514370e-02-1.29616313e-03j, -2.36830412e-18+8.02309608e-18j,
+         2.63870214e-17+6.94581918e-17j, -4.25920162e-17-4.07089402e-17j,
+         2.05012111e-17-6.57878707e-17j,  3.88402389e-17-2.83659282e-17j,
+         1.31125336e-16-1.07330539e-18j,  1.50406501e-17+1.30713264e-16j,
+         1.24388428e-16-7.11448145e-17j, -4.41612462e-17-4.92067398e-17j,
+         7.15669460e-17-4.48588649e-18j, -3.18158664e-05-1.74359609e-06j,
+         2.21455950e-17-1.57658242e-17j,  3.60178980e-03+1.97387886e-04j,
+         2.48030773e-03+1.35927616e-04j,  2.57777625e-04+1.41269156e-05j,
+        -3.28817547e-17-2.71809485e-16j,  1.61546124e-17+6.61363325e-17j,
+        -8.44844673e-17-2.45326947e-17j,  2.07793724e-17+1.30104261e-17j,
+        -2.71979899e-17-8.22228595e-18j,  3.66379418e-17-4.35442698e-17j,
+        -9.05564795e-17+3.02275566e-16j, -2.77222104e-17+2.37331856e-16j,
+         6.79248984e-17+1.26343378e-16j, -2.78267264e-17+7.75441723e-17j,
+         3.13856275e-17-2.67147415e-16j,  1.39116696e-17-5.39932682e-17j,
+         2.30406985e-17+6.00546360e-18j, -9.31597191e-18+2.00712927e-17j,
+         1.58542539e-16-4.41588504e-17j, -6.82345395e-18-1.44415729e-16j,
+        -1.39356545e-17-1.74014449e-17j, -5.55653613e-18-2.86771475e-17j,
+         2.33954008e-17-1.30619257e-16j,  3.13033547e-17-1.10046521e-16j,
+        -2.77884987e-17+4.81927866e-17j, -7.45297966e-17+1.16009632e-17j,
+        -1.79314601e-16-1.07028042e-16j, -1.28544725e-16+2.43728648e-16j,
+         1.66863297e-15-3.79210552e-15j,  2.66289060e-17+1.20672330e-16j,
+        -1.46615872e-04-8.03494892e-06j,  1.64462678e-03+9.01300247e-05j,
+        -2.76058565e-03-1.51287609e-04j,  1.30225265e-04+7.13669902e-06j,
+        -1.12569643e-16+7.25739959e-17j, -2.71691958e-03-1.48894589e-04j,
+         9.81469375e-03+5.37871935e-04j, -1.42599493e-18-6.30035489e-17j,
+        -2.15835525e-02-1.18283743e-03j,  1.49095363e-02+8.17083176e-04j,
+        -2.65092493e-03-1.45277903e-04j, -4.73216175e-04-2.59335346e-05j,
+         1.78899602e-16+5.09554692e-16j, -6.12035637e-02-3.35412190e-03j,
+         5.47058179e-02+2.99802774e-03j, -6.39611519e-17-1.11266248e-16j,
+        -5.85213330e-17-5.56195714e-17j,  2.28678392e-02+1.25321984e-03j,
+         2.68828150e-17+3.61852475e-18j, -5.27261340e-06-2.88953568e-07j,
+         8.62777484e-03+4.72825548e-04j, -3.01560761e-02-1.65263506e-03j,
+        -1.66454087e-16+1.94939551e-16j, -6.02271130e-17-2.12991517e-16j,
+         3.45518088e-17-6.97648505e-17j,  2.34833470e-17+4.41588504e-17j,
+        -4.10748942e-17-6.73019979e-17j, -1.01724435e-16-9.09242996e-17j,
+         5.68851858e-17-1.87368456e-16j, -7.59219818e-17+2.05077994e-16j,
+         1.77160555e-15-4.00618904e-15j,  2.22647692e-16+3.34069794e-18j,
+        -2.86157140e-03-1.56821903e-04j, -8.96142778e-04-4.91110638e-05j,
+        -2.28157270e-04-1.25036395e-05j, -6.71019894e-03-3.67737169e-04j,
+         5.57196685e-17-1.78147969e-16j, -1.63542019e-03-8.96254784e-05j,
+        -2.32414477e-02-1.27369460e-03j,  9.71859093e-18-2.80438923e-17j,
+         3.49590899e-17+3.43457725e-17j,  1.11181938e-02+6.09307288e-04j,
+         2.54370982e-17+1.28547487e-16j,  2.41130677e-03+1.32146175e-04j,
+         1.04556094e-01+5.72995855e-03j, -9.94284976e-03-5.44895233e-04j,
+         2.72450907e-15-5.10770703e-15j, -3.70526092e-17+1.74339709e-16j,
+        -4.78603426e-02-2.62287706e-03j, -1.00968026e-02-5.53332266e-04j,
+        -4.17888980e-04-2.29014537e-05j, -2.43370340e-03-1.33373571e-04j,
+        -1.31863234e-17+2.99298875e-16j, -3.44011651e-02-1.88527750e-03j,
+         1.72443167e-02+9.45035496e-04j, -1.41108913e-16-1.08420217e-18j,
+         6.96310308e-03+3.81597004e-04j, -2.33430225e-02-1.27926118e-03j,
+         9.81110143e-03+5.37675067e-04j, -1.88672751e-02-1.03397804e-03j,
+         1.77122768e-15-4.89896274e-15j,  5.22059385e-02+2.86102755e-03j,
+        -9.82935670e-01-5.38675505e-02j, -1.94608587e-16-1.69525932e-15j,
+         2.54385855e-17-1.59547126e-17j, -6.26724044e-17-6.98226199e-17j,
+         3.94742228e-17+2.00577402e-18j, -1.24281044e-17-8.15637671e-17j,
+        -1.25604822e-16-4.29886161e-17j,  1.60553093e-17-5.16757860e-17j,
+        -7.60709179e-16-3.10038453e-15j, -7.69783542e-17+1.04083409e-17j]])}}
+
+real	0m55.580s
+user	1m2.047s
+sys	0m5.234s

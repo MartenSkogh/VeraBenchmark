@@ -1,0 +1,820 @@
+2020-03-19 15:56:49,296:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "atom": "H -0.735 0.0 0.0; H 0.0 0.0 0.0; H 0.735 0.0 0.0; ",
+    "basis": "sto3g",
+    "charge": 0,
+    "conv_tol": 1e-09,
+    "hf_method": "rohf",
+    "init_guess": "minao",
+    "max_cycle": 50,
+    "max_memory": null,
+    "spin": 1,
+    "unit": "Angstrom"
+}
+2020-03-19 15:56:49,297:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "pyscf_schema",
+    "properties": {
+        "atom": {
+            "default": "H 0.0 0.0 0.0; H 0.0 0.0 0.735",
+            "type": "string"
+        },
+        "basis": {
+            "default": "sto3g",
+            "type": "string"
+        },
+        "charge": {
+            "default": 0,
+            "type": "integer"
+        },
+        "conv_tol": {
+            "default": 1e-09,
+            "type": "number"
+        },
+        "hf_method": {
+            "default": "rhf",
+            "enum": [
+                "rhf",
+                "rohf",
+                "uhf"
+            ],
+            "type": "string"
+        },
+        "init_guess": {
+            "default": "minao",
+            "enum": [
+                "minao",
+                "1e",
+                "atom"
+            ],
+            "type": "string"
+        },
+        "max_cycle": {
+            "default": 50,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "max_memory": {
+            "default": null,
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "spin": {
+            "default": 0,
+            "type": "integer"
+        },
+        "unit": {
+            "default": "Angstrom",
+            "enum": [
+                "Angstrom",
+                "Bohr"
+            ],
+            "type": "string"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:49,494:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "freeze_core": false,
+    "orbital_reduction": [],
+    "qubit_mapping": "parity",
+    "transformation": "full",
+    "two_qubit_reduction": true
+}
+2020-03-19 15:56:49,494:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "hamiltonian_schema",
+    "properties": {
+        "freeze_core": {
+            "default": false,
+            "type": "boolean"
+        },
+        "orbital_reduction": {
+            "default": [],
+            "items": {
+                "type": "number"
+            },
+            "type": "array"
+        },
+        "qubit_mapping": {
+            "default": "parity",
+            "enum": [
+                "jordan_wigner",
+                "parity",
+                "bravyi_kitaev"
+            ],
+            "type": "string"
+        },
+        "transformation": {
+            "default": "full",
+            "enum": [
+                "full",
+                "particle_hole"
+            ],
+            "type": "string"
+        },
+        "two_qubit_reduction": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:50,072:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "aux_ops": null,
+    "qubit_op": {
+        "paulis": [
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -1.5352866697683207
+                },
+                "label": "IIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.3284716378433745
+                },
+                "label": "IIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03097342980724841
+                },
+                "label": "IIXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03097342980724841
+                },
+                "label": "IIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.12012026476496615
+                },
+                "label": "IIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.3671463519310721
+                },
+                "label": "IIZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.10781752443471523
+                },
+                "label": "IZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.028113816391413925
+                },
+                "label": "XXII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.028113816391413925
+                },
+                "label": "YYII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1385467991963276
+                },
+                "label": "ZZII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.5659206000314825
+                },
+                "label": "ZIII"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.15579842688867443
+                },
+                "label": "IZIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.024771589704706158
+                },
+                "label": "IZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.024771589704706158
+                },
+                "label": "IZYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.038520557939590395
+                },
+                "label": "IXZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.038520557939590395
+                },
+                "label": "ZXZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.038520557939590395
+                },
+                "label": "IXIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.038520557939590395
+                },
+                "label": "ZXIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.02477158970470616
+                },
+                "label": "YYIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.02477158970470616
+                },
+                "label": "XXIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03212416524985816
+                },
+                "label": "YYXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03212416524985816
+                },
+                "label": "XXXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03212416524985816
+                },
+                "label": "YYYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03212416524985816
+                },
+                "label": "XXYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.13790768198979564
+                },
+                "label": "ZZIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0037025381018063884
+                },
+                "label": "ZZXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0037025381018063884
+                },
+                "label": "ZZYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.033246161201137554
+                },
+                "label": "XIZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.033246161201137554
+                },
+                "label": "XZZX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.033246161201137554
+                },
+                "label": "XIIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.033246161201137554
+                },
+                "label": "XZIX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.16145769723050504
+                },
+                "label": "ZIIZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.026201394024234926
+                },
+                "label": "ZIXX"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.026201394024234926
+                },
+                "label": "ZIYY"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.13790768198979564
+                },
+                "label": "IZZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03324616120113755
+                },
+                "label": "IXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03324616120113755
+                },
+                "label": "ZXXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.03324616120113755
+                },
+                "label": "IXXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.03324616120113755
+                },
+                "label": "ZXXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.0037025381018063884
+                },
+                "label": "YYZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.0037025381018063884
+                },
+                "label": "XXZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.14674926600638571
+                },
+                "label": "ZZZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.035790123403081506
+                },
+                "label": "XIXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.035790123403081506
+                },
+                "label": "XZXZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.035790123403081506
+                },
+                "label": "XIXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.035790123403081506
+                },
+                "label": "XZXI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1461171801074111
+                },
+                "label": "ZIZZ"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.16145769723050504
+                },
+                "label": "IZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.026201394024234926
+                },
+                "label": "YYZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.026201394024234926
+                },
+                "label": "XXZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": 0.1461171801074111
+                },
+                "label": "ZZZI"
+            },
+            {
+                "coeff": {
+                    "imag": 0.0,
+                    "real": -0.1788827568632981
+                },
+                "label": "ZIZI"
+            }
+        ]
+    }
+}
+2020-03-19 15:56:50,072:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "energy_state_schema",
+    "properties": {
+        "aux_ops": {
+            "default": null,
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "qubit_op": {
+            "default": {},
+            "type": "object"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:50,953:qiskit.aqua.operators.weighted_pauli_operator:INFO: Operator is empty, can not do two qubit reduction. Return the empty operator back.
+2020-03-19 15:56:50,987:qiskit.aqua.operators.weighted_pauli_operator:INFO: Operator is empty, can not do two qubit reduction. Return the empty operator back.
+2020-03-19 15:56:51,050:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "disp": false,
+    "eps": 1.4901161193847656e-08,
+    "ftol": 1e-06,
+    "maxiter": 50000,
+    "tol": null
+}
+2020-03-19 15:56:51,051:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "cobyla_schema",
+    "properties": {
+        "disp": {
+            "default": false,
+            "type": "boolean"
+        },
+        "eps": {
+            "default": 1.4901161193847656e-08,
+            "type": "number"
+        },
+        "ftol": {
+            "default": 1e-06,
+            "type": "number"
+        },
+        "maxiter": {
+            "default": 100,
+            "type": "integer"
+        },
+        "tol": {
+            "default": null,
+            "type": [
+                "number",
+                "null"
+            ]
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:51,053:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "num_orbitals": 6,
+    "num_particles": [
+        2,
+        1
+    ],
+    "qubit_mapping": "parity",
+    "two_qubit_reduction": true
+}
+2020-03-19 15:56:51,053:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "hf_state_schema",
+    "properties": {
+        "num_orbitals": {
+            "default": 4,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "num_particles": {
+            "contains": {
+                "type": "integer"
+            },
+            "default": [
+                1,
+                1
+            ],
+            "maxItems": 2,
+            "minItems": 2,
+            "type": [
+                "array",
+                "integer"
+            ]
+        },
+        "qubit_mapping": {
+            "default": "parity",
+            "enum": [
+                "jordan_wigner",
+                "parity",
+                "bravyi_kitaev"
+            ],
+            "type": "string"
+        },
+        "two_qubit_reduction": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:51,054:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "active_occupied": null,
+    "active_unoccupied": null,
+    "depth": 1,
+    "num_orbitals": 6,
+    "num_particles": [
+        2,
+        1
+    ],
+    "num_time_slices": 1,
+    "qubit_mapping": "parity",
+    "two_qubit_reduction": true
+}
+2020-03-19 15:56:51,055:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "uccsd_schema",
+    "properties": {
+        "active_occupied": {
+            "default": null,
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "active_unoccupied": {
+            "default": null,
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "depth": {
+            "default": 1,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "num_orbitals": {
+            "default": 4,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "num_particles": {
+            "contains": {
+                "type": "integer"
+            },
+            "default": [
+                1,
+                1
+            ],
+            "maxItems": 2,
+            "minItems": 2,
+            "type": [
+                "array",
+                "integer"
+            ]
+        },
+        "num_time_slices": {
+            "default": 1,
+            "minimum": 1,
+            "type": "integer"
+        },
+        "qubit_mapping": {
+            "default": "parity",
+            "enum": [
+                "jordan_wigner",
+                "parity",
+                "bravyi_kitaev"
+            ],
+            "type": "string"
+        },
+        "two_qubit_reduction": {
+            "default": true,
+            "type": "boolean"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:51,241:qiskit.aqua.parser.json_schema:DEBUG: Input: {
+    "initial_point": null,
+    "max_evals_grouped": 1
+}
+2020-03-19 15:56:51,242:qiskit.aqua.parser.json_schema:DEBUG: Input Schema: {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "id": "vqe_schema",
+    "properties": {
+        "initial_point": {
+            "default": null,
+            "items": {
+                "type": "number"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "max_evals_grouped": {
+            "default": 1,
+            "type": "integer"
+        }
+    },
+    "type": "object"
+}
+2020-03-19 15:56:51,244:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: 
+==================== Setting of VQE ============================
+Algorithm: VQE
+-- quantum_instance: None
+-- var_form: <qiskit.chemistry.components.variational_forms.uccsd.UCCSD object at 0x7f928c11f860>
+-- optimizer: <qiskit.aqua.components.optimizers.slsqp.SLSQP object at 0x7f928806b6a0>
+-- cost_fn: <bound method VQE._energy_evaluation of <qiskit.aqua.algorithms.adaptive.vqe.vqe.VQE object at 0x7f92cd012a20>>
+-- initial_point: [0. 0.]
+-- parameterized_circuits: None
+-- use_simulator_snapshot_mode: None
+-- ret: None
+-- eval_time: None
+-- callback: None
+-- operator: Representation: paulis, qubits: 3, size: 31
+-- eval_count: 0
+-- aux_operators: []
+-- auto_conversion: True
+===============================================================
+Variational Form: UCCSD
+-- num_parameters: 2
+-- num_qubits: 3
+-- bounds: [(-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793)]
+-- support_parameterized_circuit: True
+-- z2_symmetries: Z2 symmetries:
+Symmetries:
+ZZZZ
+Single-Qubit Pauli X:
+IIIX
+Cliffords:
+ZZZZ	(0.7071067811865475+0j)
+IIIX	(0.7071067811865475+0j)
+
+Qubit index:
+[0]
+Tapering values:
+[1]
+-- depth: 1
+-- num_orbitals: 6
+-- num_alpha: 2
+-- num_beta: 1
+-- num_particles: [2, 1]
+-- initial_state: <qiskit.chemistry.components.initial_states.hartree_fock.HartreeFock object at 0x7f928c11f5f8>
+-- qubit_mapping: parity
+-- two_qubit_reduction: True
+-- num_time_slices: 1
+-- shallow_circuit_concat: False
+-- single_excitations: [[0, 2], [3, 5]]
+-- double_excitations: []
+-- hopping_ops: [<qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7f928805f780>, <qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator object at 0x7f928805fda0>]
+-- excitation_pool: None
+-- logging_construct_circuit: True
+===============================================================
+Optimizer: SLSQP
+-- gradient_support_level: 2
+-- bounds_support_level: 2
+-- initial_point_support_level: 3
+-- options: {'eps': 1.4901161193847656e-08, 'ftol': 1e-06, 'disp': False, 'maxiter': 50000}
+-- max_evals_grouped: 1
+-- tol: None
+===============================================================
+
+2020-03-19 15:56:51,245:qiskit.aqua.quantum_instance:INFO: statevector backend only works with shot=1, change shots from 1024 to 1.
+2020-03-19 15:56:51,247:qiskit.aqua.quantum_instance:INFO: 
+Qiskit Terra version: 0.12.0
+Backend: 'statevector_simulator (AerProvider)', with following setting:
+{'basis_gates': ['u1', 'u2', 'u3', 'cx', 'cz', 'id', 'x', 'y', 'z', 'h', 's', 'sdg', 't', 'tdg', 'swap', 'ccx', 'unitary', 'initialize', 'cu1', 'cu2', 'cu3', 'cswap', 'mcx', 'mcy', 'mcz', 'mcu1', 'mcu2', 'mcu3', 'mcswap', 'multiplexer'], 'coupling_map': None}
+{'pass_manager': None, 'initial_layout': None, 'seed_transpiler': None, 'optimization_level': 1}
+RunConfig(max_credits=10, shots=1)
+{'timeout': None}
+{}
+{}
+Measurement mitigation: None
+2020-03-19 15:56:51,248:qiskit.aqua.algorithms.adaptive.vq_algorithm:INFO: Starting optimizer.
+bounds=[(-3.141592653589793, 3.141592653589793), (-3.141592653589793, 3.141592653589793)]
+initial point=[0. 0.]
+2020-03-19 15:56:51,412:qiskit.aqua.quantum_instance:DEBUG: ==== Before transpiler ====
+2020-03-19 15:56:51,412:qiskit.aqua.quantum_instance:DEBUG: Submitting 1 circuits.
+============================================================================
+0-th circuit: 3 qubits, 0 classical bits and 4 operations with depth 3
+op_counts: OrderedDict([('u3', 2), ('Evolution^1', 2), ('snapshot', 1)])
+============================================================================
+
+2020-03-19 15:56:51,413:qiskit.aqua.quantum_instance:DEBUG: ====  After transpiler ====
+2020-03-19 15:56:51,413:qiskit.aqua.quantum_instance:DEBUG: Submitting 1 circuits.
+============================================================================
+0-th circuit: 3 qubits, 0 classical bits and 22 operations with depth 15
+op_counts: OrderedDict([('cx', 8), ('u2', 7), ('u1', 4), ('u3', 3), ('snapshot', 1)])
+============================================================================
+
+2020-03-19 15:56:51,427:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 1 returned -1.8040580865577458
+2020-03-19 15:56:51,432:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 2 returned -1.8040580865577458
+2020-03-19 15:56:51,438:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 3 returned -1.8040580865577458
+2020-03-19 15:56:51,444:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 4 returned -1.8040580910509976
+2020-03-19 15:56:51,450:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 5 returned -1.7762407585141267
+2020-03-19 15:56:51,455:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 6 returned -1.8215120823747357
+2020-03-19 15:56:51,461:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 7 returned -1.8215120823747357
+2020-03-19 15:56:51,466:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 8 returned -1.8215120823747357
+2020-03-19 15:56:51,472:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 9 returned -1.8215120823670936
+2020-03-19 15:56:51,472:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Optimization complete in 0.22378897666931152 seconds.
+Found opt_params [0.        0.1154484] in 9 evals
+{'energy': -0.021589596252286514, 'nuclear_repulsion_energy': 1.7999224861224492, 'hf_energy': -1.4983708385632324, 'energies': [-0.021589596252286514], 'algorithm_retvals': {'num_optimizer_evals': 9, 'min_val': -1.8215120823747357, 'opt_params': array([0.       , 0.1154484]), 'eval_time': 0.22378897666931152, 'eval_count': 9, 'energy': -1.8215120823747357, 'eigvals': array([-1.82151208]), 'min_vector': array([ 1.32692235e-02+1.14425309e-01j,  0.00000000e+00+0.00000000e+00j,
+        0.00000000e+00-9.71445147e-17j,  0.00000000e+00+0.00000000e+00j,
+       -2.28983499e-16+4.94396191e-17j,  0.00000000e+00+0.00000000e+00j,
+        1.14425309e-01+9.86730776e-01j,  0.00000000e+00+0.00000000e+00j]), 'eigvecs': array([[ 1.32692235e-02+1.14425309e-01j,  0.00000000e+00+0.00000000e+00j,
+         0.00000000e+00-9.71445147e-17j,  0.00000000e+00+0.00000000e+00j,
+        -2.28983499e-16+4.94396191e-17j,  0.00000000e+00+0.00000000e+00j,
+         1.14425309e-01+9.86730776e-01j,  0.00000000e+00+0.00000000e+00j]])}}
+
+real	0m5.057s
+user	0m5.719s
+sys	0m3.203s
