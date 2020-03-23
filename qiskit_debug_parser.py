@@ -54,6 +54,16 @@ def get_real_time(filename):
     return real_time
 
 
+def get_number_evaluation_steps(filename):
+    nbr_steps = 0
+    with open(filename, 'r') as debug_file:
+        for line in debug_file:
+            if ' Energy evaluation ' in line:
+                nbr_steps += 1
+
+    return nbr_steps
+
+
 def get_qubits(filename):
     nbr_qubits = None
     with open(filename, 'r') as debug_file:
