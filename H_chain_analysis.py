@@ -9,7 +9,7 @@ settings_filename = 'H_chain_benchmarks.csv'
 
 
 import matplotlib.pyplot as plt
-from qiskit_debug_parser import get_mean_time, get_real_time, get_qubits 
+from qiskit_debug_parser import get_mean_time, get_real_time, get_qubits, get_number_evaluation_steps
 
 
 
@@ -22,29 +22,48 @@ for line in settings_file:
     settings.append(setting)
     print(setting)
 
+qubits = []
+evaluation_steps = []
 mean_times = []
 mean_time_std_devs = []
 real_times = []
+
+# Files that have run on small systems (no parallel processing)
+for i in range(1,9):
+    nbr_qubits = get_qubits(data_dir + f'circuit_nH={i}.out')
+    nbr_evalutaion_steps = get_number_evaluation_steps(data_dir + f'circuit_nH={i}.out')
+    mean_time, std_dev = get_mean_time(data_dir + f'circuit_nH={i}.out')
+    real_time = get_real_time(data_dir + f'circuit_nH={i}.out')
+
+    qubits.append(nbr_qubits)
+    evaluation_steps.append(nbr_evalutaion_steps)
+    mean_times.append(mean_time)
+    mean_time_std_devs.append(std_dev)
+    real_times.append(real_time)
+
+    print(f'Qubits: {nbr_qubits}, Evaluation steps: {nbr_evalutaion_steps}')
 
 for setting in settings:
     jobid = setting[-1]
     
     try:
+        nbr_qubits = get_qubits(data_dir + f'circuit_nH={i}.out')
+        nbr_evalutaion_steps = get_number_evaluation_steps(data_dir + f'circuit_nH={i}.out')
         mean_time, std_dev = get_mean_time(data_dir + 'slurm-' + str(jobid) + '.out')
         real_time = get_real_time(data_dir + 'slurm-' + str(jobid) + '.out')
+
+        qubits.append(nbr_qubits)
+        evaluation_steps.append(nbr_evalutaion_steps)
         mean_times.append(mean_time)
         mean_time_std_devs.append(std_dev)
         real_times.append(real_time)
+
         print(f"-n: {setting[1]:>2}, N(H): {setting[0]:>2}, Mean time: {mean_time}, Mean time standard deviation: {std_dev}")
     except FileNotFoundError:
         mean_times.append(None)
         real_times.append(None)
         mean_time_std_devs.append(None)
         print(f'Could not find slurm file for jobid: {jobid}')
-
-for i in range(1,9):
-    nbr_qubits = get_qubits(data_dir + f'circuit_nH={i}.out')
-    print(f'There are {nbr_qubits} qubits in here!')
 
 # Plot mean evaluation time
 plt.figure(1)
@@ -65,6 +84,8 @@ for i in range(len(h_atoms[0,:])):
     except TypeError:
         print('Cannot plot stupid data')
     legends.append(f'N(H) = {h_atoms[0,i]:>2},\nN(qb) = {int(h_atoms[0,i]) * 2 - 3:>2}')
+
+
 
 plt.legend(legends, loc='lower right')
 plt.grid(True, which='both')
