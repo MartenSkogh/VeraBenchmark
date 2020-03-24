@@ -70,3 +70,6 @@ sorted_qubits, sorted_steps = zip(*sorted(zip(qubits, evaluation_steps), key=lam
 
 for qubit, steps in zip(sorted_qubits, sorted_steps):
     print(f'Qubits: {qubit}, Evaluation steps: {steps}')
+
+plt.plot(qubits, evaluation_steps)
+plt.show()
