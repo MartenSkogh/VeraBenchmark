@@ -7,29 +7,36 @@ from datetime import datetime
 def get_mean_time(filename):
     # we want to find the files where the energy evaluation is printed
     data = []
+    start = None
     with open(filename) as slurm_file:
         for line in slurm_file:
-            if ' Energy evaluation ' in line:
+            if ' Submitting 1 circuits.' in line:
+                start = datetime.fromisoformat(line.split(',', 1)[0])
+
+            elif ' Energy evaluation ' in line:
                 date_time = datetime.fromisoformat(line.split(',', 1)[0])
                 idx = int(line.split(' Energy evaluation ')[1].split(' returned')[0])
                 energy = float(line.split(' returned ')[1].strip())
                 data.append((idx, energy, date_time))
 
 
-    total_time = data[-1][2] - data[0][2]
-    mean_time = total_time.total_seconds() / (len(data) - 1)
+
+    if len(data) < 1:
+        return 0, 0
+
+    total_time = data[-1][2] - start
+    mean_time = total_time.total_seconds() / len(data)
 
     total_square = 0
-    prev = None
+    prev = start
     for d in data:
-        if prev == None:
-            prev = d[2]
-        else:
-            time = (d[2] - prev).total_seconds()
-            total_square += time ** 2
-            prev = d[2]
+        time = (d[2] - prev).total_seconds()
+        total_square += time ** 2
+        prev = d[2]
 
-    variance = total_square / (len(data) - 1) - (mean_time ** 2)
+    variance = total_square / len(data) - (mean_time ** 2)
+    if variance < 0: 
+        raise ValueError(f'Something has gonde horribly wrong, the calculated variance is negative: {variance}')
     std_dev = np.sqrt(variance)
 
     return mean_time, std_dev
@@ -41,7 +48,6 @@ def get_real_time(filename):
     with open(filename) as slurm_file:
         for line in slurm_file:
             if 'real\t' in line:
-                print(line)
                 time_str = line.strip().split('\t', 1)[1]
                 time_arr = time_str.split('m') # Split on the m
                 minutes = float(time_arr[0])
@@ -49,7 +55,7 @@ def get_real_time(filename):
                 real_time = minutes * 60 + seconds
         if real_time == 0:
             real_time = None
-            print('Did not finish')
+    #        print('Did not finish')
 
     return real_time
 
@@ -75,7 +81,7 @@ def get_qubits(filename):
     return nbr_qubits
 
 def get_nbr_circuit_parameters(filename):
-    nbr_parameters = -1
+    nbr_parameters = 0
     with open(filename, 'r') as debug_file:
         for line in debug_file:
             if '-- num_parameters: ' in line:

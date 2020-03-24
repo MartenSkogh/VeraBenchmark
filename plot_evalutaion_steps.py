@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from qiskit_debug_parser import get_qubits, get_number_evaluation_steps, get_nbr_circuit_parameters
+from qiskit_debug_parser import get_mean_time, get_qubits, get_number_evaluation_steps, get_nbr_circuit_parameters, get_real_time
 
 data_dir = './Data/'
 
@@ -53,26 +53,37 @@ files = [
          './Data/slurm-1068144.out'
          ]
 
+mean_times = []
+mean_times_std_dev = []
 qubits = []
 evaluation_steps = []
 parameters = []
+wall_times = []
 
 # Files that have run on small systems (no parallel processing)
 for filename in files:
+    mean_time, std_dev = get_mean_time(filename)
     nbr_qubits = get_qubits(filename)
     nbr_evalutaion_steps = get_number_evaluation_steps(filename)
     nbr_circuit_params = get_nbr_circuit_parameters(filename)
+    wall_time = get_real_time(filename)
 
+    mean_times.append(mean_time)
+    mean_times_std_dev.append(std_dev)
     qubits.append(nbr_qubits)
     evaluation_steps.append(nbr_evalutaion_steps)
     parameters.append(nbr_circuit_params)
+    wall_times.append(wall_time)
 
 print(qubits[0], qubits[0] == None)
 
-sorted_qubits, sorted_steps, sorted_params = zip(*sorted(zip(qubits, evaluation_steps, parameters), key=lambda x: (0,x[1], x[2]) if x[0] is None else x))
+data = [mean_times, mean_times_std_dev, qubits, evaluation_steps, parameters, wall_times]
+#data_sorted = sorted(data, key=lambda x: [x[1:2], 0, x[3:]] if x[2] is None else x)
+data_sorted = sorted(zip(*data), key=lambda x: 0 if x[2] is None else x[2])
 
-for qubit, steps, params in zip(sorted_qubits, sorted_steps, sorted_params):
-    print(f'Qubits: {qubit}, Parameters: {params}, Evaluation steps: {steps}')
+
+for mt, sd, qubit, steps, params, wt in data_sorted:
+    print(f'Qubits: {0 if qubit is None else qubit:2d}, Parameters: {params:4d}, Evaluation steps: {steps:5d}, Mean time per step: {mt:8.2f}, Total time: {"dnf" if wt is None else wt:>10}, Mean time std. deviation: {sd:7.2f}')
 
 plt.plot(qubits, evaluation_steps)
 plt.show()

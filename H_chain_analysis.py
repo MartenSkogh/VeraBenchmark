@@ -28,21 +28,6 @@ mean_times = []
 mean_time_std_devs = []
 real_times = []
 
-# Files that have run on small systems (no parallel processing)
-for i in range(1,9):
-    nbr_qubits = get_qubits(data_dir + f'circuit_nH={i}.out')
-    nbr_evalutaion_steps = get_number_evaluation_steps(data_dir + f'circuit_nH={i}.out')
-    mean_time, std_dev = get_mean_time(data_dir + f'circuit_nH={i}.out')
-    real_time = get_real_time(data_dir + f'circuit_nH={i}.out')
-
-    qubits.append(nbr_qubits)
-    evaluation_steps.append(nbr_evalutaion_steps)
-    mean_times.append(mean_time)
-    mean_time_std_devs.append(std_dev)
-    real_times.append(real_time)
-
-    print(f'Qubits: {nbr_qubits}, Evaluation steps: {nbr_evalutaion_steps}')
-
 for setting in settings:
     jobid = setting[-1]
     
