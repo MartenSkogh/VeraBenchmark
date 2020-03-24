@@ -79,7 +79,7 @@ def get_nbr_circuit_parameters(filename):
     with open(filename, 'r') as debug_file:
         for line in debug_file:
             if '-- num_parameters: ' in line:
-                nbr_parameters = int(line.strip().split('num_parparameters: ')[1])
+                nbr_parameters = int(line.strip().split('num_parameters: ')[1])
 
 
     return nbr_parameters
