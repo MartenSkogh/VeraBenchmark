@@ -73,3 +73,13 @@ def get_qubits(filename):
 
 
     return nbr_qubits
+
+def get_nbr_circuit_parameters(filename):
+    nbr_parameters = -1
+    with open(filename, 'r') as debug_file:
+        for line in debug_file:
+            if '-- num_parameters: ' in line:
+                nbr_parameters = int(line.strip().split('num_parparameters: ')[1])
+
+
+    return nbr_parameters
