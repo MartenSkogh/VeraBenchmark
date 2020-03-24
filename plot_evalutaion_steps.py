@@ -1,12 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from qiskit_debug_parser import get_qubits, get_number_evaluation_steps
+from qiskit_debug_parser import get_qubits, get_number_evaluation_steps, get_nbr_circuit_parameters
 
 data_dir = './Data/'
-
-qubits = []
-evaluation_steps = []
 
 files = [
          './Data/circuit_nH=1.out',
@@ -56,20 +53,26 @@ files = [
          './Data/slurm-1068144.out'
          ]
 
+qubits = []
+evaluation_steps = []
+parameters = []
+
 # Files that have run on small systems (no parallel processing)
 for filename in files:
     nbr_qubits = get_qubits(filename)
     nbr_evalutaion_steps = get_number_evaluation_steps(filename)
+    nbr_circuit_params = get_nbr_circuit_parameters(filename)
 
     qubits.append(nbr_qubits)
     evaluation_steps.append(nbr_evalutaion_steps)
+    parameters.append(nbr_circuit_params)
 
 print(qubits[0], qubits[0] == None)
 
-sorted_qubits, sorted_steps = zip(*sorted(zip(qubits, evaluation_steps), key=lambda x: (0,x[1]) if x[0] is None else x))
+sorted_qubits, sorted_steps, sorted_params = zip(*sorted(zip(qubits, evaluation_steps, parameters), key=lambda x: (0,x[1], x[2]) if x[0] is None else x))
 
-for qubit, steps in zip(sorted_qubits, sorted_steps):
-    print(f'Qubits: {qubit}, Evaluation steps: {steps}')
+for qubit, steps, params in zip(sorted_qubits, sorted_steps, sorted_params):
+    print(f'Qubits: {qubit}, Parameters: {params}, Evaluation steps: {steps}')
 
 plt.plot(qubits, evaluation_steps)
 plt.show()
